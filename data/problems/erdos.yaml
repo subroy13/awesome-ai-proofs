@@ -1,0 +1,937 @@
+problems:
+- id: erdos-728
+  title: "Divisibility between products of factorials (Erdős #728)"
+  subjects:
+  - Number theory
+  category: Research
+  question: 'What is the exact statement and scope of the reported resolution of Erdős problem #728? See
+    the linked paper; an elementary explainer is still needed.'
+  caveat: Verification details are reported in the sources; proof artifacts have not been rebuilt for
+    this catalogue.
+  events:
+  - title: "Divisibility between products of factorials (Erdős #728)"
+    year: '2026'
+    date: '2026-01'
+    summary: GPT-5.2 Pro plus Harmonic's Aristotle, operated by Kevin Barreto, produced a Lean proof,
+      billed as the first Erdős problem fully resolved autonomously by an AI system; written up in prose
+      by Nat Sothanaphan.
+    links:
+    - label: 'Erdős Problem #728'
+      url: https://arxiv.org/abs/2601.07421
+      type: Paper
+    reported_evidence:
+    - machine-checked
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - GPT-5.2 Pro
+    - Aristotle
+    evidence_scope: result
+- id: erdos-183
+  title: 'Erdős #183: multicolour triangle Ramsey numbers'
+  subjects:
+  - Graph theory
+  category: Research
+  question: How quickly can multicolour triangle Ramsey numbers grow?
+  caveat: Reported by OpenAI; peer review and local proof rebuild are not recorded.
+  events:
+  - title: 'Erdős #183: multicolour triangle Ramsey numbers'
+    year: '2026'
+    date: '2026-08-01'
+    summary: OpenAI reports a resolution with an accompanying Lean artifact.
+    links:
+    - label: OpenAI's ten advances
+      url: https://github.com/openai/ten-proofs
+      type: Lean
+    - label: Result-specific Lean file
+      url: https://github.com/openai/ten-proofs/blob/main/MulticolorTriangleRamsey.lean
+      type: Lean
+    reported_evidence:
+    - machine-checked
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - OpenAI (unreleased)
+    evidence_scope: result
+    source_group: ten-proofs
+- id: erdos-146
+  title: 'Erdős #146: extremal compactness'
+  subjects:
+  - Graph theory
+  category: Research
+  question: Does the extremal compactness conjecture hold?
+  caveat: Reported by OpenAI; peer review and local proof rebuild are not recorded.
+  events:
+  - title: 'Erdős #146: extremal compactness'
+    year: '2026'
+    date: '2026-08-01'
+    summary: OpenAI reports a resolution with an accompanying Lean artifact.
+    links:
+    - label: OpenAI's ten advances
+      url: https://github.com/openai/ten-proofs
+      type: Lean
+    - label: Result-specific Lean file
+      url: https://github.com/openai/ten-proofs/blob/main/CompactnessAndDegeneracy.lean
+      type: Lean
+    reported_evidence:
+    - machine-checked
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - OpenAI (unreleased)
+    evidence_scope: result
+    source_group: ten-proofs
+- id: erdos-180
+  title: 'Erdős #180: extremal degeneracy'
+  subjects:
+  - Graph theory
+  category: Research
+  question: Does the extremal degeneracy conjecture hold?
+  caveat: Reported by OpenAI; peer review and local proof rebuild are not recorded.
+  events:
+  - title: 'Erdős #180: extremal degeneracy'
+    year: '2026'
+    date: '2026-08-01'
+    summary: OpenAI reports a resolution with an accompanying Lean artifact.
+    links:
+    - label: OpenAI's ten advances
+      url: https://github.com/openai/ten-proofs
+      type: Lean
+    - label: Result-specific Lean file
+      url: https://github.com/openai/ten-proofs/blob/main/CompactnessAndDegeneracy.lean
+      type: Lean
+    reported_evidence:
+    - machine-checked
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - OpenAI (unreleased)
+    evidence_scope: result
+    source_group: ten-proofs
+- id: erdos-1196
+  title: 'Erdős #1196: primitive sets of large integers'
+  subjects:
+  - Combinatorics
+  - Probability
+  category: Research
+  question: For primitive A ⊂ [x, ∞), is the sum of 1/(a log a) at most 1 + o(1)?
+  caveat: Human authors developed the proofs; the AI contribution was a method suggestion.
+  events:
+  - title: 'Erdős #1196: primitive sets of large integers'
+    year: '2026'
+    date: '2026-05'
+    summary: The paper proves a quantitative bound using a Markov-chain method suggested by GPT-5.4 Pro.
+    links:
+    - label: 'Erdős Problem #1196'
+      url: https://arxiv.org/abs/2605.00301
+      type: Paper
+    - label: Individual theorem statements
+      url: https://arxiv.org/html/2605.00301v1
+      type: Paper
+    reported_evidence:
+    - verified
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - GPT-5.4 Pro
+    evidence_scope: result
+    source_group: erdos-1196
+- id: erdos-1217
+  title: 'Erdős #1217: divisibility chains'
+  subjects:
+  - Combinatorics
+  - Probability
+  category: Research
+  question: Does positive doubly logarithmic density force a comparably dense infinite divisibility chain?
+  caveat: The precise density hypothesis and bound are in Theorem 1.6.
+  events:
+  - title: 'Erdős #1217: divisibility chains'
+    year: '2026'
+    date: '2026-05'
+    summary: The same method establishes the divisibility-chain result.
+    links:
+    - label: 'Erdős Problem #1196'
+      url: https://arxiv.org/abs/2605.00301
+      type: Paper
+    - label: Individual theorem statements
+      url: https://arxiv.org/html/2605.00301v1
+      type: Paper
+    reported_evidence:
+    - verified
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - GPT-5.4 Pro
+    evidence_scope: result
+    source_group: erdos-1196
+- id: erdos-164
+  title: 'Erdős #164: primitive set conjecture'
+  subjects:
+  - Combinatorics
+  - Probability
+  category: Research
+  question: Is the weighted sum over any primitive set bounded by the weighted sum over primes?
+  caveat: This is a reproof, not a first solution; Lichtman proved the conjecture earlier.
+  events:
+  - title: 'Erdős #164: primitive set conjecture'
+    year: '2026'
+    date: '2026-05'
+    summary: The paper supplies a shorter proof of a previously established theorem.
+    links:
+    - label: 'Erdős Problem #1196'
+      url: https://arxiv.org/abs/2605.00301
+      type: Paper
+    - label: Individual theorem statements
+      url: https://arxiv.org/html/2605.00301v1
+      type: Paper
+    reported_evidence:
+    - verified
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - GPT-5.4 Pro
+    evidence_scope: result
+    source_group: erdos-1196
+- id: erdos-652
+  title: "Distinct distances from multiple selected points (Erdős #652)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The numbered question and its assumptions are given in the linked Erdős problem statement.
+  caveat: Source-reported resolution; no formal artifact is listed.
+  events:
+  - title: "Distinct distances from multiple selected points (Erdős #652)"
+    year: '2026'
+    date: '2026-01'
+    summary: Reported resolution reported for Aletheia.
+    links:
+    - label: Aletheia on Erdős problems
+      url: https://arxiv.org/abs/2602.10177
+      type: Paper
+    - label: sweep itself
+      url: https://arxiv.org/abs/2601.22401
+      type: Paper
+    - label: Problem statement
+      url: https://www.erdosproblems.com/652
+      type: Context
+    - label: Result classification
+      url: https://arxiv.org/html/2601.22401v1
+      type: Paper
+    reported_evidence:
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - Aletheia
+    evidence_scope: result
+    source_group: aletheia-erdos
+- id: erdos-1051
+  title: "Irrationality of reciprocal products in fast-growing sequences (Erdős #1051)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The numbered question and its assumptions are given in the linked Erdős problem statement.
+  caveat: Source-reported resolution; no formal artifact is listed.
+  events:
+  - title: "Irrationality of reciprocal products in fast-growing sequences (Erdős #1051)"
+    year: '2026'
+    date: '2026-01'
+    summary: Reported resolution reported for Aletheia.
+    links:
+    - label: Aletheia on Erdős problems
+      url: https://arxiv.org/abs/2602.10177
+      type: Paper
+    - label: sweep itself
+      url: https://arxiv.org/abs/2601.22401
+      type: Paper
+    - label: Problem statement
+      url: https://www.erdosproblems.com/1051
+      type: Context
+    - label: Result classification
+      url: https://arxiv.org/html/2601.22401v1
+      type: Paper
+    reported_evidence:
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - Aletheia
+    evidence_scope: result
+    source_group: aletheia-erdos
+- id: erdos-654
+  title: "Distinct distances when no four points lie on a circle (Erdős #654)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The numbered question and its assumptions are given in the linked Erdős problem statement.
+  caveat: Only part of this question is reported resolved.
+  events:
+  - title: "Distinct distances when no four points lie on a circle (Erdős #654)"
+    year: '2026'
+    date: '2026-01'
+    summary: Partial solution reported for Aletheia.
+    links:
+    - label: Aletheia on Erdős problems
+      url: https://arxiv.org/abs/2602.10177
+      type: Paper
+    - label: sweep itself
+      url: https://arxiv.org/abs/2601.22401
+      type: Paper
+    - label: Problem statement
+      url: https://www.erdosproblems.com/654
+      type: Context
+    - label: Result classification
+      url: https://arxiv.org/html/2601.22401v1
+      type: Paper
+    reported_evidence:
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - Aletheia
+    evidence_scope: result
+    source_group: aletheia-erdos
+- id: erdos-935
+  title: "Powerful parts of products of consecutive integers (Erdős #935)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The numbered question and its assumptions are given in the linked Erdős problem statement.
+  caveat: Only part of this question is reported resolved.
+  events:
+  - title: "Powerful parts of products of consecutive integers (Erdős #935)"
+    year: '2026'
+    date: '2026-01'
+    summary: Partial solution reported for Aletheia.
+    links:
+    - label: Aletheia on Erdős problems
+      url: https://arxiv.org/abs/2602.10177
+      type: Paper
+    - label: sweep itself
+      url: https://arxiv.org/abs/2601.22401
+      type: Paper
+    - label: Problem statement
+      url: https://www.erdosproblems.com/935
+      type: Context
+    - label: Result classification
+      url: https://arxiv.org/html/2601.22401v1
+      type: Paper
+    reported_evidence:
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - Aletheia
+    evidence_scope: result
+    source_group: aletheia-erdos
+- id: erdos-1040
+  title: "Polynomial sublevel areas and logarithmic capacity (Erdős #1040)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The numbered question and its assumptions are given in the linked Erdős problem statement.
+  caveat: Only part of this question is reported resolved.
+  events:
+  - title: "Polynomial sublevel areas and logarithmic capacity (Erdős #1040)"
+    year: '2026'
+    date: '2026-01'
+    summary: Partial solution reported for Aletheia.
+    links:
+    - label: Aletheia on Erdős problems
+      url: https://arxiv.org/abs/2602.10177
+      type: Paper
+    - label: sweep itself
+      url: https://arxiv.org/abs/2601.22401
+      type: Paper
+    - label: Problem statement
+      url: https://www.erdosproblems.com/1040
+      type: Context
+    - label: Result classification
+      url: https://arxiv.org/html/2601.22401v1
+      type: Paper
+    reported_evidence:
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - Aletheia
+    evidence_scope: result
+    source_group: aletheia-erdos
+- id: erdos-397
+  title: "Equal products of distinct central binomial coefficients (Erdős #397)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The numbered question and its assumptions are given in the linked Erdős problem statement.
+  caveat: Existing literature already contains a solution.
+  events:
+  - title: "Equal products of distinct central binomial coefficients (Erdős #397)"
+    year: '2026'
+    date: '2026-01'
+    summary: Rediscovery reported for Aletheia.
+    links:
+    - label: Aletheia on Erdős problems
+      url: https://arxiv.org/abs/2602.10177
+      type: Paper
+    - label: sweep itself
+      url: https://arxiv.org/abs/2601.22401
+      type: Paper
+    - label: Problem statement
+      url: https://www.erdosproblems.com/397
+      type: Context
+    - label: Result classification
+      url: https://arxiv.org/html/2601.22401v1
+      type: Paper
+    reported_evidence:
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - Aletheia
+    evidence_scope: result
+    source_group: aletheia-erdos
+- id: erdos-659
+  title: "Few distances overall, but at least three among every four points (Erdős #659)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The numbered question and its assumptions are given in the linked Erdős problem statement.
+  caveat: Existing literature already contains a solution.
+  events:
+  - title: "Few distances overall, but at least three among every four points (Erdős #659)"
+    year: '2026'
+    date: '2026-01'
+    summary: Rediscovery reported for Aletheia.
+    links:
+    - label: Aletheia on Erdős problems
+      url: https://arxiv.org/abs/2602.10177
+      type: Paper
+    - label: sweep itself
+      url: https://arxiv.org/abs/2601.22401
+      type: Paper
+    - label: Problem statement
+      url: https://www.erdosproblems.com/659
+      type: Context
+    - label: Result classification
+      url: https://arxiv.org/html/2601.22401v1
+      type: Paper
+    reported_evidence:
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - Aletheia
+    evidence_scope: result
+    source_group: aletheia-erdos
+- id: erdos-1089
+  title: "Forcing distinct distances in high dimensions (Erdős #1089)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The numbered question and its assumptions are given in the linked Erdős problem statement.
+  caveat: Existing literature already contains a solution.
+  events:
+  - title: "Forcing distinct distances in high dimensions (Erdős #1089)"
+    year: '2026'
+    date: '2026-01'
+    summary: Rediscovery reported for Aletheia.
+    links:
+    - label: Aletheia on Erdős problems
+      url: https://arxiv.org/abs/2602.10177
+      type: Paper
+    - label: sweep itself
+      url: https://arxiv.org/abs/2601.22401
+      type: Paper
+    - label: Problem statement
+      url: https://www.erdosproblems.com/1089
+      type: Context
+    - label: Result classification
+      url: https://arxiv.org/html/2601.22401v1
+      type: Paper
+    reported_evidence:
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - Aletheia
+    evidence_scope: result
+    source_group: aletheia-erdos
+- id: erdos-333
+  title: "Sparse additive bases for sets of density zero (Erdős #333)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The numbered question and its assumptions are given in the linked Erdős problem statement.
+  caveat: Existing literature already contains a solution.
+  events:
+  - title: "Sparse additive bases for sets of density zero (Erdős #333)"
+    year: '2026'
+    date: '2026-01'
+    summary: Literature identification reported for Aletheia.
+    links:
+    - label: Aletheia on Erdős problems
+      url: https://arxiv.org/abs/2602.10177
+      type: Paper
+    - label: sweep itself
+      url: https://arxiv.org/abs/2601.22401
+      type: Paper
+    - label: Problem statement
+      url: https://www.erdosproblems.com/333
+      type: Context
+    - label: Result classification
+      url: https://arxiv.org/html/2601.22401v1
+      type: Paper
+    reported_evidence:
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - Aletheia
+    evidence_scope: result
+    source_group: aletheia-erdos
+  - title: "Sparse additive bases for sets of density zero (Erdős #333) — retracted claim"
+    year: '2026'
+    date: '2026-08-03'
+    summary: announced as solved with GPT-5.2; Erdős had resolved it himself in a 1977 paper. Barreto
+      retracted, saying "I've fallen for this twice now".
+    links:
+    - label: 'Erdős Problem #333 retracted'
+      url: https://www.quantamagazine.org/why-the-legendary-erdos-problems-are-falling-to-ai-20260803/
+      type: News
+    reported_evidence:
+    - debunked
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - GPT-5.2
+    evidence_scope: novelty claim
+- id: erdos-591
+  title: "An ordinal Ramsey relation at ω^(ω²) (Erdős #591)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The numbered question and its assumptions are given in the linked Erdős problem statement.
+  caveat: Existing literature already contains a solution.
+  events:
+  - title: "An ordinal Ramsey relation at ω^(ω²) (Erdős #591)"
+    year: '2026'
+    date: '2026-01'
+    summary: Literature identification reported for Aletheia.
+    links:
+    - label: Aletheia on Erdős problems
+      url: https://arxiv.org/abs/2602.10177
+      type: Paper
+    - label: sweep itself
+      url: https://arxiv.org/abs/2601.22401
+      type: Paper
+    - label: Problem statement
+      url: https://www.erdosproblems.com/591
+      type: Context
+    - label: Result classification
+      url: https://arxiv.org/html/2601.22401v1
+      type: Paper
+    reported_evidence:
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - Aletheia
+    evidence_scope: result
+    source_group: aletheia-erdos
+- id: erdos-705
+  title: "Colouring unit-distance graphs with large girth (Erdős #705)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The numbered question and its assumptions are given in the linked Erdős problem statement.
+  caveat: Existing literature already contains a solution.
+  events:
+  - title: "Colouring unit-distance graphs with large girth (Erdős #705)"
+    year: '2026'
+    date: '2026-01'
+    summary: Literature identification reported for Aletheia.
+    links:
+    - label: Aletheia on Erdős problems
+      url: https://arxiv.org/abs/2602.10177
+      type: Paper
+    - label: sweep itself
+      url: https://arxiv.org/abs/2601.22401
+      type: Paper
+    - label: Problem statement
+      url: https://www.erdosproblems.com/705
+      type: Context
+    - label: Result classification
+      url: https://arxiv.org/html/2601.22401v1
+      type: Paper
+    reported_evidence:
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - Aletheia
+    evidence_scope: result
+    source_group: aletheia-erdos
+- id: erdos-992
+  title: "Discrepancy of fractional parts of scaled integer sequences (Erdős #992)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The numbered question and its assumptions are given in the linked Erdős problem statement.
+  caveat: Existing literature already contains a solution.
+  events:
+  - title: "Discrepancy of fractional parts of scaled integer sequences (Erdős #992)"
+    year: '2026'
+    date: '2026-01'
+    summary: Literature identification reported for Aletheia.
+    links:
+    - label: Aletheia on Erdős problems
+      url: https://arxiv.org/abs/2602.10177
+      type: Paper
+    - label: sweep itself
+      url: https://arxiv.org/abs/2601.22401
+      type: Paper
+    - label: Problem statement
+      url: https://www.erdosproblems.com/992
+      type: Context
+    - label: Result classification
+      url: https://arxiv.org/html/2601.22401v1
+      type: Paper
+    reported_evidence:
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - Aletheia
+    evidence_scope: result
+    source_group: aletheia-erdos
+- id: erdos-1105
+  title: "Anti-Ramsey numbers for paths and cycles (Erdős #1105)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The numbered question and its assumptions are given in the linked Erdős problem statement.
+  caveat: Existing literature already contains a solution.
+  events:
+  - title: "Anti-Ramsey numbers for paths and cycles (Erdős #1105)"
+    year: '2026'
+    date: '2026-01'
+    summary: Literature identification reported for Aletheia.
+    links:
+    - label: Aletheia on Erdős problems
+      url: https://arxiv.org/abs/2602.10177
+      type: Paper
+    - label: sweep itself
+      url: https://arxiv.org/abs/2601.22401
+      type: Paper
+    - label: Problem statement
+      url: https://www.erdosproblems.com/1105
+      type: Context
+    - label: Result classification
+      url: https://arxiv.org/html/2601.22401v1
+      type: Paper
+    reported_evidence:
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - Aletheia
+    evidence_scope: result
+    source_group: aletheia-erdos
+- id: erdos-12-parts-i
+  title: "Square-root growth in sets avoiding divisibility by pair sums (Erdős #12)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The linked Lean file fixes the exact statement and variant.
+  caveat: A formal variant may be weaker than the full numbered question. No local rebuild was performed.
+  events:
+  - title: "Square-root growth in sets avoiding divisibility by pair sums (Erdős #12)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus supplies a formal proof for this statement.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/ErdosProblems/erdos_12.parts.i.lean
+      type: Lean
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: erdos-12-parts-ii
+  title: "Power-law bounds for sets avoiding divisibility by pair sums (Erdős #12)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The linked Lean file fixes the exact statement and variant.
+  caveat: A formal variant may be weaker than the full numbered question. No local rebuild was performed.
+  events:
+  - title: "Power-law bounds for sets avoiding divisibility by pair sums (Erdős #12)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus supplies a formal proof for this statement.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/ErdosProblems/erdos_12.parts.ii.lean
+      type: Lean
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: erdos-125-variants-positive-lower-density
+  title: "Density of sums of integers with restricted base-3 and base-4 digits (Erdős #125)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The linked Lean file fixes the exact statement and variant.
+  caveat: A formal variant may be weaker than the full numbered question. No local rebuild was performed.
+  events:
+  - title: "Density of sums of integers with restricted base-3 and base-4 digits (Erdős #125)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus supplies a formal proof for this statement.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/ErdosProblems/erdos_125.variants.positive_lower_density.lean
+      type: Lean
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: erdos-138-variants-difference
+  title: "Growing gaps between van der Waerden numbers (Erdős #138)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The linked Lean file fixes the exact statement and variant.
+  caveat: A formal variant may be weaker than the full numbered question. No local rebuild was performed.
+  events:
+  - title: "Growing gaps between van der Waerden numbers (Erdős #138)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus supplies a formal proof for this statement.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/ErdosProblems/erdos_138.variants.difference.lean
+      type: Lean
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: erdos-152
+  title: "Isolated sums in Sidon sets (Erdős #152)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The linked Lean file fixes the exact statement and variant.
+  caveat: A formal variant may be weaker than the full numbered question. No local rebuild was performed.
+  events:
+  - title: "Isolated sums in Sidon sets (Erdős #152)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus supplies a formal proof for this statement.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/ErdosProblems/erdos_152.lean
+      type: Lean
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: erdos-26-variants-tenenbaum
+  title: "Density of multiples of shifted sequences with divergent reciprocal sums (Erdős #26)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The linked Lean file fixes the exact statement and variant.
+  caveat: A formal variant may be weaker than the full numbered question. No local rebuild was performed.
+  events:
+  - title: "Density of multiples of shifted sequences with divergent reciprocal sums (Erdős #26)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus supplies a formal proof for this statement.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/ErdosProblems/erdos_26.variants.tenenbaum.lean
+      type: Lean
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: erdos-741-parts-i
+  title: "Splitting a set while preserving positive sumset density (Erdős #741)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The linked Lean file fixes the exact statement and variant.
+  caveat: A formal variant may be weaker than the full numbered question. No local rebuild was performed.
+  events:
+  - title: "Splitting a set while preserving positive sumset density (Erdős #741)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus supplies a formal proof for this statement.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/ErdosProblems/erdos_741.parts.i.lean
+      type: Lean
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: erdos-741-parts-ii
+  title: "Splitting additive bases into sumsets with bounded gaps (Erdős #741)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The linked Lean file fixes the exact statement and variant.
+  caveat: A formal variant may be weaker than the full numbered question. No local rebuild was performed.
+  events:
+  - title: "Splitting additive bases into sumsets with bounded gaps (Erdős #741)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus supplies a formal proof for this statement.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/ErdosProblems/erdos_741.parts.ii.lean
+      type: Lean
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: erdos-846
+  title: "Covering planar sets by finitely many sets with no three collinear points (Erdős #846)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The linked Lean file fixes the exact statement and variant.
+  caveat: A formal variant may be weaker than the full numbered question. No local rebuild was performed.
+  events:
+  - title: "Covering planar sets by finitely many sets with no three collinear points (Erdős #846)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus supplies a formal proof for this statement.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/ErdosProblems/erdos_846.lean
+      type: Lean
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep

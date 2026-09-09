@@ -1,0 +1,47 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const vm = require('node:vm');
+const root = path.join(__dirname, '..');
+const Catalogue = require('../site/catalogue.js');
+// Use the built website payload, avoiding a second YAML parser in the frontend.
+const html = fs.readFileSync(path.join(root, 'docs-site/visualizations.html'), 'utf8');
+const records = JSON.parse(html.match(/<script type="application\/json" id="chart-data">([\s\S]*?)<\/script>/)[1]);
+assert.ok(records.length > 0);
+const rows = records.map((p, i) => ({hidden:false,dataset:{category:p.category,subjects:JSON.stringify(p.subjects),models:JSON.stringify(p.models),evidence:p.evidence.join(' '),date:`${String(2000 + i).padStart(4, '0')}-01-01`,search:[p.title,...p.subjects,...p.models].join(' ')},querySelector:()=>({textContent:p.title})}));
+const controls = Object.fromEntries(['search','category','subject','model','evidence','sort'].map(k=>[k,{value:''}]));
+controls['result-count']={textContent:''};controls.empty={hidden:true};
+const listeners={};const form={hidden:true,addEventListener:(type,fn)=>{listeners[type]=fn;}};
+let order=[];const tbody={rows,append:row=>order.push(row)};
+const context={Catalogue,document:{querySelector:s=>s==='#filters'?form:tbody,getElementById:id=>controls[id]},setTimeout:fn=>fn(),location:{hash:''},window:{addEventListener:()=>{}}};
+vm.runInNewContext(fs.readFileSync(path.join(root,'site/app.js'),'utf8'),context);
+function apply(){order=[];listeners.input();return rows.filter(r=>!r.hidden);}
+assert.equal(form.hidden,false);assert.equal(apply().length,records.length);
+controls.model.value='AlphaProof Nexus';assert.ok(apply().length>0);assert.ok(apply().every(r=>JSON.parse(r.dataset.models).includes('AlphaProof Nexus')));
+controls.category.value='Historical';assert.equal(apply().length,0);assert.equal(controls.empty.hidden,false);
+controls.category.value='';controls.model.value='';controls.evidence.value='verified';assert.ok(apply().every(r=>r.dataset.evidence.split(' ').includes('verified')));
+controls.evidence.value='';controls.search.value='no-record-has-this';assert.equal(apply().length,0);
+controls.search.value='';controls.sort.value='newest';apply();assert.ok(order.every((r,i)=>!i||order[i-1].dataset.date>=r.dataset.date));
+controls.sort.value='oldest';apply();assert.ok(order.every((r,i)=>!i||order[i-1].dataset.date<=r.dataset.date));
+controls.sort.value='title';apply();assert.ok(order.every((r,i)=>!i||order[i-1].querySelector().textContent.localeCompare(r.querySelector().textContent)<=0));
+for(const id of ['search','category','subject','model','evidence','sort'])controls[id].value='';listeners.reset();assert.equal(apply().length,records.length);
+assert.deepEqual(Catalogue.counts([{models:['A','A','B']},{models:['A']}],'models'),[['A',2],['B',1]]);
+for(const dimension of ['years','evidence','models','subjects']) for(const [value,count] of Catalogue.counts(records,dimension)) assert.equal(Catalogue.select(records,'',{dimension,value}).length,count);
+assert.equal(Catalogue.select(records,'Historical',{dimension:'models',value:'AlphaProof Nexus'}).length,0);
+console.log('Table filters, model search, sorting, reset, chart counts and chart selection passed.');
+// Exercise the chart page's actual event wiring and resulting visible records.
+const chartListeners={};
+const chartControls=Object.fromEntries(['viz-category','viz-count','viz-reset','selection-title','selection-count',...['years','evidence','models','subjects'].map(d=>`chart-${d}`)].map(id=>[id,{value:'',textContent:'',innerHTML:'',addEventListener:(type,fn)=>{chartListeners[`${id}:${type}`]=fn;}}]));
+chartControls['chart-data']={textContent:JSON.stringify(records)};
+const listRows=records.map(p=>({dataset:{record:p.id},hidden:false}));
+const grid={addEventListener:(type,fn)=>{chartListeners[`grid:${type}`]=fn;}};
+const chartContext={Catalogue,document:{getElementById:id=>chartControls[id],querySelector:s=>s==='.chart-grid'?grid:null,querySelectorAll:s=>s==='[data-record]'?listRows:[]},location:{hash:''},window:{addEventListener:()=>{}}};
+vm.runInNewContext(fs.readFileSync(path.join(root,'site/app.js'),'utf8'),chartContext);
+assert.ok(chartControls['chart-years'].innerHTML.includes('data-dimension="years"'));
+const click={target:{closest:()=>({dataset:{dimension:'models',value:'AlphaProof Nexus'}})},preventDefault:()=>{}};
+chartListeners['grid:click'](click);
+assert.equal(listRows.filter(r=>!r.hidden).length,Catalogue.select(records,'',{dimension:'models',value:'AlphaProof Nexus'}).length);
+chartListeners['grid:click'](click);assert.equal(listRows.filter(r=>!r.hidden).length,records.length);
+chartControls['viz-category'].value='Historical';chartListeners['viz-category:change']();assert.equal(listRows.filter(r=>!r.hidden).length,records.filter(p=>p.category==='Historical').length);
+chartListeners['viz-reset:click']();assert.equal(listRows.filter(r=>!r.hidden).length,records.length);
+console.log('Chart click, deselection, category change and reset update the displayed records.');

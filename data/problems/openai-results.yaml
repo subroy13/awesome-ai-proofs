@@ -1,0 +1,282 @@
+# Add or update problem records here. See CONTRIBUTING.md.
+problems:
+- id: high-dimensional-packing
+  title: Asymptotic sphere-packing density
+  subjects:
+  - Discrete geometry
+  category: Research
+  question: Can asymptotic density bounds reach the Cohn–Elkies threshold?
+  caveat: Reported by OpenAI; peer review and local proof rebuild are not recorded.
+  events:
+  - title: Asymptotic sphere-packing density
+    year: '2026'
+    date: '2026-08-01'
+    summary: OpenAI reports a resolution with an accompanying Lean artifact.
+    links:
+    - label: OpenAI's ten advances
+      url: https://github.com/openai/ten-proofs
+      type: Lean
+    - label: Result-specific Lean file
+      url: https://github.com/openai/ten-proofs/blob/main/SpherePacking.lean
+      type: Lean
+    reported_evidence:
+    - machine-checked
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - OpenAI (unreleased)
+    evidence_scope: result
+    source_group: ten-proofs
+- id: binary-codes
+  title: Asymptotic size of binary codes
+  subjects:
+  - Coding theory
+  category: Research
+  question: Can upper bounds at fixed minimum distance be strengthened?
+  caveat: Reported by OpenAI; peer review and local proof rebuild are not recorded.
+  events:
+  - title: Asymptotic size of binary codes
+    year: '2026'
+    date: '2026-08-01'
+    summary: OpenAI reports a resolution with an accompanying Lean artifact.
+    links:
+    - label: OpenAI's ten advances
+      url: https://github.com/openai/ten-proofs
+      type: Lean
+    - label: Result-specific Lean file
+      url: https://github.com/openai/ten-proofs/blob/main/MetricCodes.lean
+      type: Lean
+    reported_evidence:
+    - machine-checked
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - OpenAI (unreleased)
+    evidence_scope: result
+    source_group: ten-proofs
+- id: spherical-codes
+  title: Upper bounds for spherical codes
+  subjects:
+  - Coding theory
+  category: Research
+  question: Can corresponding spherical-code size bounds be strengthened?
+  caveat: Reported by OpenAI; peer review and local proof rebuild are not recorded.
+  events:
+  - title: Upper bounds for spherical codes
+    year: '2026'
+    date: '2026-08-01'
+    summary: OpenAI reports a resolution with an accompanying Lean artifact.
+    links:
+    - label: OpenAI's ten advances
+      url: https://github.com/openai/ten-proofs
+      type: Lean
+    - label: Result-specific Lean file
+      url: https://github.com/openai/ten-proofs/blob/main/MetricCodes.lean
+      type: Lean
+    reported_evidence:
+    - machine-checked
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - OpenAI (unreleased)
+    evidence_scope: result
+    source_group: ten-proofs
+- id: non-sofic-group
+  title: Existence of a non-sofic group
+  subjects:
+  - Group theory
+  category: Research
+  question: Must every group admit finite permutation approximations?
+  caveat: The original notes report a novelty and attribution dispute, rather than an allegation that
+    the proof is wrong. See the linked coverage.
+  events:
+  - title: Existence of a non-sofic group
+    year: '2026'
+    date: '2026-08-01'
+    summary: OpenAI reports a resolution with an accompanying Lean artifact.
+    links:
+    - label: OpenAI's ten advances
+      url: https://github.com/openai/ten-proofs
+      type: Lean
+    - label: coverage
+      url: https://www.scientificamerican.com/article/openais-latest-math-breakthroughs-commit-research-misconduct-experts-say/
+      type: News
+    - label: Result-specific Lean file
+      url: https://github.com/openai/ten-proofs/blob/main/NonSoficGroup.lean
+      type: Lean
+    reported_evidence:
+    - machine-checked
+    - self-reported
+    - disputed
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - OpenAI (unreleased)
+    evidence_scope: result
+    source_group: ten-proofs
+- id: connes-rigidity
+  title: Connes’s rigidity conjecture
+  subjects:
+  - Operator algebras
+  category: Research
+  question: Do the specified von Neumann algebras determine their groups?
+  caveat: The original notes report a novelty and attribution dispute, rather than an allegation that
+    the proof is wrong. See the linked coverage.
+  events:
+  - title: Connes’s rigidity conjecture
+    year: '2026'
+    date: '2026-08-01'
+    summary: OpenAI reports a resolution with an accompanying Lean artifact.
+    links:
+    - label: OpenAI's ten advances
+      url: https://github.com/openai/ten-proofs
+      type: Lean
+    - label: coverage
+      url: https://www.scientificamerican.com/article/openais-latest-math-breakthroughs-commit-research-misconduct-experts-say/
+      type: News
+    - label: Result-specific Lean file
+      url: https://github.com/openai/ten-proofs/blob/main/ConnesRigidity.lean
+      type: Lean
+    reported_evidence:
+    - machine-checked
+    - self-reported
+    - disputed
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - OpenAI (unreleased)
+    evidence_scope: result
+    source_group: ten-proofs
+- id: permanent-circuits
+  title: Arithmetic complexity of the permanent
+  subjects:
+  - Complexity theory
+  category: Research
+  question: What lower bounds hold for permanent circuits and formulas?
+  caveat: Reported by OpenAI; peer review and local proof rebuild are not recorded.
+  events:
+  - title: Arithmetic complexity of the permanent
+    year: '2026'
+    date: '2026-08-01'
+    summary: OpenAI reports a resolution with an accompanying Lean artifact.
+    links:
+    - label: OpenAI's ten advances
+      url: https://github.com/openai/ten-proofs
+      type: Lean
+    - label: Result-specific Lean file
+      url: https://github.com/openai/ten-proofs/blob/main/Permanent.lean
+      type: Lean
+    reported_evidence:
+    - machine-checked
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - OpenAI (unreleased)
+    evidence_scope: result
+    source_group: ten-proofs
+- id: quantum-parallel-repetition
+  title: Parallel repetition for quantum games
+  subjects:
+  - Quantum computing
+  category: Research
+  question: Does repetition cause exponential decay in quantum-game success?
+  caveat: An independent audit found a polarity error in a printed greedy-conditioning lemma and supplied
+    a local repair. The correction does not independently verify the later sampleability, alignment,
+    rounding or main parallel-repetition arguments; the Lean artifact was not rebuilt here.
+  events:
+  - title: Parallel repetition for quantum games
+    year: '2026'
+    date: '2026-08-01'
+    summary: OpenAI reports a resolution with an accompanying Lean artifact. Sienicki and Sienicki later
+      identified a success-versus-failure polarity error in the printed proof of a preliminary conditioning
+      lemma, gave a counterexample to the printed procedure and proved a corrected version with the same
+      statement and parameters. They explicitly do not claim to verify the main theorem.
+    links:
+    - label: OpenAI's ten advances
+      url: https://github.com/openai/ten-proofs
+      type: Lean
+    - label: Result-specific Lean file
+      url: https://github.com/openai/ten-proofs/blob/main/QuantumParallelRepetition.lean
+      type: Lean
+    - label: Independent audit and correction
+      url: https://arxiv.org/abs/2608.14673
+      type: Paper
+    reported_evidence:
+    - machine-checked
+    - self-reported
+    - disputed
+    reviewed_on: '2026-09-08'
+    review_note: Read the OpenAI source and the independent August 2026 audit. The audit verifies and
+      repairs one preliminary lemma but does not assess the remainder of the proof; no local rebuild was performed.
+    models:
+    - OpenAI (unreleased)
+    evidence_scope: result
+    source_group: ten-proofs
+- id: closest-vector
+  title: Approximation hardness of the closest vector problem
+  subjects:
+  - Complexity theory
+  category: Research
+  question: How hard is polynomial-factor closest-vector approximation?
+  caveat: Reported by OpenAI; peer review and local proof rebuild are not recorded.
+  events:
+  - title: Approximation hardness of the closest vector problem
+    year: '2026'
+    date: '2026-08-01'
+    summary: OpenAI reports a resolution with an accompanying Lean artifact.
+    links:
+    - label: OpenAI's ten advances
+      url: https://github.com/openai/ten-proofs
+      type: Lean
+    - label: Result-specific Lean file
+      url: https://github.com/openai/ten-proofs/blob/main/GapCVP.lean
+      type: Lean
+    reported_evidence:
+    - machine-checked
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - OpenAI (unreleased)
+    evidence_scope: result
+    source_group: ten-proofs
+- id: ehrhart-volume
+  title: Ehrhart’s volume conjecture
+  subjects:
+  - Discrete geometry
+  category: Research
+  question: How large can a convex body with one interior lattice point at its centroid be?
+  caveat: Reported by OpenAI; peer review and local proof rebuild are not recorded.
+  events:
+  - title: Ehrhart’s volume conjecture
+    year: '2026'
+    date: '2026-08-01'
+    summary: OpenAI reports a resolution with an accompanying Lean artifact.
+    links:
+    - label: OpenAI's ten advances
+      url: https://github.com/openai/ten-proofs
+      type: Lean
+    - label: Result-specific Lean file
+      url: https://github.com/openai/ten-proofs/blob/main/EhrhartVolumeInequality.lean
+      type: Lean
+    reported_evidence:
+    - machine-checked
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - OpenAI (unreleased)
+    evidence_scope: result
+    source_group: ten-proofs

@@ -1,0 +1,142 @@
+# Add or update problem records here. See CONTRIBUTING.md.
+problems:
+- id: toroidal-elton-odell
+  title: Toroidal Elton–Odell theorem
+  subjects:
+  - Functional analysis
+  category: Research
+  question: Is uniform separation above one possible modulo complex phases?
+  caveat: Human reading only; no formalization is listed.
+  events:
+  - title: Toroidal Elton–Odell theorem
+    year: '2026'
+    date: '2026-07'
+    summary: Problem 1 reports a GPT-5.5 Pro argument, subsequently checked and edited by the authors.
+    links:
+    - label: Banach space theory with ChatGPT 5.5 Pro
+      url: https://arxiv.org/abs/2607.17388
+      type: Paper
+    - label: Statement and proof
+      url: https://arxiv.org/html/2607.17388v1
+      type: Paper
+    reported_evidence:
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - GPT-5.5 Pro
+    evidence_scope: result
+    source_group: banach-collection
+- id: non-calkin
+  title: Non-Calkin unital Banach algebras
+  subjects:
+  - Functional analysis
+  category: Research
+  question: Which unital Banach algebras cannot be realised as Calkin algebras?
+  caveat: Human reading only; no formalization is listed.
+  events:
+  - title: Non-Calkin unital Banach algebras
+    year: '2026'
+    date: '2026-07'
+    summary: Problem 2 reports a GPT-5.5 Pro argument, subsequently checked and edited by the authors.
+    links:
+    - label: Banach space theory with ChatGPT 5.5 Pro
+      url: https://arxiv.org/abs/2607.17388
+      type: Paper
+    - label: Statement and proof
+      url: https://arxiv.org/html/2607.17388v1
+      type: Paper
+    reported_evidence:
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - GPT-5.5 Pro
+    evidence_scope: result
+    source_group: banach-collection
+- id: strict-cosingularity
+  title: Strict cosingularity and adjoints
+  subjects:
+  - Functional analysis
+  category: Research
+  question: How does strict cosingularity relate to properties of adjoints?
+  caveat: Human reading only; no formalization is listed.
+  events:
+  - title: Strict cosingularity and adjoints
+    year: '2026'
+    date: '2026-07'
+    summary: Problem 3 reports a GPT-5.5 Pro argument, subsequently checked and edited by the authors.
+    links:
+    - label: Banach space theory with ChatGPT 5.5 Pro
+      url: https://arxiv.org/abs/2607.17388
+      type: Paper
+    - label: Statement and proof
+      url: https://arxiv.org/html/2607.17388v1
+      type: Paper
+    reported_evidence:
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - GPT-5.5 Pro
+    evidence_scope: result
+    source_group: banach-collection
+- id: weakly-compact-factorization
+  title: Weakly compact basis factorization
+  subjects:
+  - Functional analysis
+  category: Research
+  question: Does the stated weakly compact operator admit a basis factorization?
+  caveat: Human reading only; no formalization is listed.
+  events:
+  - title: Weakly compact basis factorization
+    year: '2026'
+    date: '2026-07'
+    summary: Problem 4 reports a GPT-5.5 Pro argument, subsequently checked and edited by the authors.
+    links:
+    - label: Banach space theory with ChatGPT 5.5 Pro
+      url: https://arxiv.org/abs/2607.17388
+      type: Paper
+    - label: Statement and proof
+      url: https://arxiv.org/html/2607.17388v1
+      type: Paper
+    reported_evidence:
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - GPT-5.5 Pro
+    evidence_scope: result
+    source_group: banach-collection
+- id: lp-l1-primary
+  title: Primariness of Lp(L1)
+  subjects:
+  - Functional analysis
+  category: Research
+  question: Is the specified mixed-norm space primary?
+  caveat: Human reading only; no formalization is listed.
+  events:
+  - title: Primariness of Lp(L1)
+    year: '2026'
+    date: '2026-07'
+    summary: Problem 5 reports a GPT-5.5 Pro argument, subsequently checked and edited by the authors.
+    links:
+    - label: Banach space theory with ChatGPT 5.5 Pro
+      url: https://arxiv.org/abs/2607.17388
+      type: Paper
+    - label: Statement and proof
+      url: https://arxiv.org/html/2607.17388v1
+      type: Paper
+    reported_evidence:
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - GPT-5.5 Pro
+    evidence_scope: result
+    source_group: banach-collection

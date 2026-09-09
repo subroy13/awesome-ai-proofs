@@ -1,0 +1,162 @@
+# Problem-level additions located via https://github.com/seewoo5/awesome-ai-for-math
+problems:
+- id: knot-signature-slope
+  title: Knot signature bounds from hyperbolic geometry
+  subjects:
+  - Knot theory
+  - Geometry
+  category: Research
+  question: Can a hyperbolic knot’s signature be bounded using its cusp geometry, volume and injectivity
+    radius?
+  caveat: Neural networks identified relevant invariants; human mathematicians formulated and proved the
+    theorem. An initial stronger conjecture had counterexamples. No formal proof artifact is listed.
+  events:
+  - title: A geometric bound on knot signature
+    year: '2021'
+    date: '2021-12'
+    models:
+    - DeepMind neural networks
+    summary: Davies and collaborators used supervised learning and feature attribution to identify a connection
+      between knot signature and natural slope. The published result bounds their discrepancy using volume
+      and injectivity radius; the mathematical proof was developed by humans.
+    evidence_scope: result
+    reported_evidence:
+    - verified
+    reviewed_on: '2026-09-08'
+    review_note: Located through seewoo5/awesome-ai-for-math. Read the Nature paper’s knot-theory results
+      and methods. The paper is peer-reviewed; no computations or proofs were rerun.
+    links:
+    - label: Nature paper
+      url: https://www.nature.com/articles/s41586-021-04086-x
+      type: Paper
+    - label: Code and datasets
+      url: https://github.com/google-deepmind/mathematics_conjectures
+      type: Code
+- id: nicd-majority-erasures
+  title: Majority optimality in correlation distillation with erasures
+  subjects:
+  - Probability
+  - Analysis
+  - Theoretical computer science
+  category: Research
+  question: Among unbiased Boolean functions, does majority maximize the expected absolute multilinear
+    extension under the specified erasure model?
+  caveat: The counterexample concerns five bits at p = 0.40 in the paper’s parameterization. It does not
+    rule out majority optimality in other regimes. Human checking is described by the authors; no formal
+    artifact is listed.
+  events:
+  - title: Five-bit counterexample to majority optimality
+    year: '2025'
+    date: '2025-10'
+    models:
+    - GPT-5 Pro
+    summary: Ivanisvili and Xie report that GPT-5 Pro found a Boolean function outperforming five-bit
+      majority at p = 0.40. Their paper gives the explicit function and a manual calculation. The authors
+      also prove optimality of majority near p = 0 for each fixed odd dimension.
+    evidence_scope: result
+    reported_evidence:
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Located through seewoo5/awesome-ai-for-math. Read the problem statement, AI attribution
+      and description of manual verification in the paper. The calculation was not independently reproduced.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2510.20013
+      type: Paper
+    - label: Statement and manual verification
+      url: https://arxiv.org/html/2510.20013v1
+      type: Paper
+- id: sharp-thin-shell
+  title: Sharp thin-shell variance bound for log-concave distributions
+  subjects:
+  - Probability
+  - Statistics
+  - Convex geometry
+  category: Research
+  question: What is the optimal universal bound on Var(|X|²) for a mean-zero log-concave random vector
+    with identity covariance?
+  caveat: The reported bound is Var(|X|²) ≤ 8n under the stated isotropy and log-concavity assumptions.
+    AI worked from human-supplied prompts and mathematical context. No formal artifact is listed.
+  events:
+  - title: Optimal constant in the thin-shell inequality
+    year: '2026'
+    date: '2026-07'
+    models:
+    - GPT-5.6 Pro
+    summary: Chen and Klartag present the sharp constant 8, attained by independent centered exponential
+      coordinates. They credit GPT-5.6 Pro with finding the proof after Chen supplied prompts informed
+      by the authors’ discussions. The arXiv submission includes the chat log.
+    evidence_scope: result
+    reported_evidence:
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Located through seewoo5/awesome-ai-for-math. Read the preprint abstract, AI-use disclosure
+      and ancillary-file listing. The argument was not independently verified.
+    links:
+    - label: Paper and ancillary chat log
+      url: https://arxiv.org/abs/2607.23307
+      type: Paper
+- id: han-conjecture
+  title: Han’s conjecture on Hochschild homology
+  subjects:
+  - Algebra
+  - Algebraic geometry
+  category: Research
+  question: Does eventual vanishing of Hochschild homology imply finite global dimension for a finite-dimensional
+    complex algebra?
+  caveat: The authors report checking the arguments and references themselves. This entry does not assert
+    external peer review or machine verification.
+  events:
+  - title: Finite-dimensional counterexample to Han’s conjecture
+    year: '2026'
+    date: '2026-08'
+    models:
+    - GPT-5.6 Sol Ultra
+    summary: Kong, Liu and Shen construct a finite-dimensional complex algebra with infinite global dimension
+      and vanishing positive-degree Hochschild homology. Their acknowledgments credit GPT-5.6 Sol Ultra
+      with assistance in discovering the counterexample and state that the authors checked the mathematics.
+    evidence_scope: result
+    reported_evidence:
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Located through seewoo5/awesome-ai-for-math. Read Theorem 1.1 and the AI acknowledgment
+      in Section 1.3. No independent proof audit was performed.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2608.00177
+      type: Paper
+    - label: Theorem and AI acknowledgment
+      url: https://arxiv.org/html/2608.00177v1
+      type: Paper
+- id: real-sum-product
+  title: Erdős–Szemerédi sum-product conjecture over the reals
+  subjects:
+  - Combinatorics
+  - Number theory
+  category: Research
+  question: Must every large finite real set have a sumset or product set of nearly quadratic size?
+  caveat: This is a source-reported AI reproof following a human disproof, not a claim of first discovery.
+    The domain is the real numbers. The reported seven successes out of eight trials were not independently
+    graded here.
+  events:
+  - title: GPT-5.5 Pro reproofs of the real sum-product disproof
+    year: '2026'
+    date: '2026-07'
+    models:
+    - GPT-5.5 Pro
+    summary: Huang reports that a three-stage agent produced disproofs in seven of eight trials and detected
+      an unresolved gap in the remaining trial. The paper explicitly places the work after a human disproof.
+      Code, intermediate outputs and generated proofs are available.
+    evidence_scope: result
+    reported_evidence:
+    - self-reported
+    reviewed_on: '2026-09-08'
+    review_note: Located through seewoo5/awesome-ai-for-math. Read the abstract and checked the linked
+      repository’s availability. Proof correctness and contamination claims were not independently audited.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2607.20525
+      type: Paper
+    - label: Agent code and proof outputs
+      url: https://github.com/yichenhuang/sum-product
+      type: Code

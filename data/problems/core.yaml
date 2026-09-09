@@ -1,0 +1,1238 @@
+# Add or update problem records here. See CONTRIBUTING.md.
+problems:
+- id: four-color
+  title: Four-colour theorem
+  subjects:
+  - Graph theory
+  category: Historical
+  question: Can every planar map be coloured with four colours so neighbouring regions differ?
+  caveat: Historical computer assistance and later formalization; not a modern machine-learning discovery.
+  events:
+  - title: Four Color Theorem
+    year: '1976'
+    date: '1976-06'
+    summary: computer-assisted proof by Appel and Haken; formalized in Coq by [Gonthier and Werner (2005)](https://github.com/rocq-community/fourcolor).
+    links:
+    - label: Four Color Theorem
+      url: https://en.wikipedia.org/wiki/Four_color_theorem
+      type: Context
+    - label: Gonthier and Werner (2005)
+      url: https://github.com/rocq-community/fourcolor
+      type: Formal proof
+    reported_evidence:
+    - machine-checked
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - Computer-assisted search (no ML)
+    evidence_scope: result
+- id: robbins
+  title: Robbins conjecture
+  subjects:
+  - Algebra
+  category: Historical
+  question: Do the Robbins identities force an algebra to be Boolean?
+  caveat: Classical automated deduction predates modern LLMs; keep its role explicit.
+  events:
+  - title: Robbins conjecture
+    year: '1996'
+    date: '1996-10-10'
+    summary: McCune's EQP prover closed a problem open for more than 60 years.
+    links:
+    - label: Robbins conjecture
+      url: https://en.wikipedia.org/wiki/Robbins_algebra
+      type: Context
+    reported_evidence:
+    - verified
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - EQP
+    evidence_scope: result
+- id: kepler
+  title: Kepler conjecture
+  subjects:
+  - Discrete geometry
+  category: Historical
+  question: What is the densest packing of equal spheres in three-dimensional space?
+  caveat: Historical computer-assisted proof and formalization; not evidence of a new AI-discovered theorem.
+  events:
+  - title: Kepler conjecture, Flyspeck
+    year: '2014'
+    date: '2014-08-10'
+    summary: Hales's proof fully verified in HOL Light and Isabelle; [journal version](https://doi.org/10.1017/fmp.2017.1)
+      in Forum of Mathematics Pi (2017).
+    links:
+    - label: Kepler conjecture, Flyspeck
+      url: https://github.com/flyspeck/flyspeck
+      type: Formal proof
+    - label: journal version
+      url: https://doi.org/10.1017/fmp.2017.1
+      type: Paper
+    reported_evidence:
+    - machine-checked
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - Flyspeck (no ML)
+    evidence_scope: result
+- id: hamiltonian-decomposition
+  title: Hamiltonian decompositions of directed toroidal grids
+  subjects:
+  - Graph theory
+  category: Research
+  question: Can the edges of the directed grid be partitioned into cycles that each visit every vertex
+    once?
+  caveat: The linked Lean artifact covers the odd case; later even-case claims need separate evidence.
+  events:
+  - title: Claude's Cycles
+    year: '2026'
+    date: '2026-02-28'
+    summary: Claude Opus 4.6 found the odd-case construction for a Hamiltonian-cycle decomposition problem
+      posed by Donald Knuth; Knuth proved it correct and wrote it up, and Kim Morrison [formalized that
+      odd-case proof in Lean](https://github.com/kim-em/KnuthClaudeLean). Days later a gpt-5.3-codex construction
+      handled even m >= 8 empirically; GPT-5.4 Pro supplied the proof (same paper, postscript and later
+      additions), which the Lean artifact does not cover.
+    links:
+    - label: Claude's Cycles
+      url: https://www-cs-faculty.stanford.edu/~knuth/papers/claude-cycles.pdf
+      type: Paper
+    - label: formalized that odd-case proof in Lean
+      url: https://github.com/kim-em/KnuthClaudeLean
+      type: Lean
+    reported_evidence:
+    - verified
+    - machine-checked
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - Claude Opus 4.6
+    - GPT-5.3 Codex
+    - GPT-5.4 Pro
+    evidence_scope: result
+- id: matrix-multiplication
+  title: Fewer multiplications for 4 × 4 matrices
+  subjects:
+  - Algebra
+  - Algorithms
+  category: Research
+  question: How few scalar multiplications suffice to multiply two 4 × 4 matrices, over a specified field?
+  caveat: 'The field matters: the 47-multiplication result is over F₂; the later characteristic-zero construction
+    is a different claim. Neither establishes optimality.'
+  events:
+  - title: AlphaTensor
+    year: '2022'
+    date: '2022-10-05'
+    summary: RL finds faster matrix multiplication algorithms (4x4 over F2 in 47 multiplications). [Nature](https://www.nature.com/articles/s41586-022-05172-4).
+    links:
+    - label: AlphaTensor
+      url: https://github.com/google-deepmind/alphatensor
+      type: Code
+    - label: Nature
+      url: https://www.nature.com/articles/s41586-022-05172-4
+      type: Paper
+    reported_evidence:
+    - verified
+    reviewed_on: '2026-09-08'
+    review_note: 'Read the Nature paper: 47 scalar multiplications for 4 × 4 matrices over F₂. Code was
+      not executed.'
+    models:
+    - AlphaTensor
+    evidence_scope: result
+  - title: AlphaEvolve
+    year: '2025'
+    date: '2025-06'
+    summary: 4x4 complex matrix multiplication in 48 scalar multiplications, first below Strassen's 49
+      in characteristic 0 (AlphaTensor had already reached 47 in characteristic 2); [Dumas, Pernet and
+      Sedoglavic](https://arxiv.org/abs/2506.13242) later hit 48 with rational coefficients, removing
+      the complex arithmetic.
+    links:
+    - label: AlphaEvolve
+      url: https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/
+      type: Context
+    - label: Dumas, Pernet and Sedoglavic
+      url: https://arxiv.org/abs/2506.13242
+      type: Paper
+    reported_evidence:
+    - verified
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - AlphaEvolve
+    evidence_scope: result
+- id: cap-sets
+  title: Large cap sets in eight dimensions
+  subjects:
+  - Combinatorics
+  category: Research
+  question: How many vectors in F₃⁸ can we choose without three distinct vectors summing to zero?
+  caveat: A larger explicit construction gives a lower bound; it does not determine the maximum cap-set
+    size.
+  events:
+  - title: FunSearch
+    year: '2023'
+    date: '2023-12-14'
+    summary: LLM program search found a cap set of size 512 in dimension 8, beating the previous 496.
+      [Nature](https://www.nature.com/articles/s41586-023-06924-6).
+    links:
+    - label: FunSearch
+      url: https://github.com/google-deepmind/funsearch
+      type: Code
+    - label: Nature
+      url: https://www.nature.com/articles/s41586-023-06924-6
+      type: Paper
+    reported_evidence:
+    - verified
+    reviewed_on: '2026-09-08'
+    review_note: 'Read the Nature paper: an explicit 512-vector cap set in dimension eight. Construction
+      was not rerun.'
+    models:
+    - FunSearch
+    evidence_scope: result
+- id: olympiad-geometry
+  title: Olympiad geometry problem suite
+  subjects:
+  - Geometry
+  category: Competitions
+  question: Can an automated system produce proofs for the specified olympiad geometry problems?
+  caveat: Verification details are reported in the sources; proof artifacts have not been rebuilt for
+    this catalogue.
+  events:
+  - title: AlphaGeometry
+    year: '2024'
+    date: '2024-01-17'
+    summary: solves 25 of 30 olympiad geometry problems. [Nature](https://www.nature.com/articles/s41586-023-06747-5).
+    links:
+    - label: AlphaGeometry
+      url: https://github.com/google-deepmind/alphageometry
+      type: Code
+    - label: Nature
+      url: https://www.nature.com/articles/s41586-023-06747-5
+      type: Paper
+    reported_evidence:
+    - verified
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - AlphaGeometry
+    evidence_scope: result
+- id: imo-2024
+  title: IMO 2024 problem set
+  subjects:
+  - Competition mathematics
+  category: Competitions
+  question: Which of the six IMO 2024 problems were solved, under what conditions, and who checked the
+    solutions?
+  caveat: Verification details are reported in the sources; proof artifacts have not been rebuilt for
+    this catalogue.
+  events:
+  - title: AlphaProof and AlphaGeometry 2
+    year: '2024'
+    date: '2024-07-25'
+    summary: '28/42 at IMO 2024, silver standard: AlphaProof produced three Lean-verified solutions, AlphaGeometry
+      2 the geometry solution; graded by Timothy Gowers and Joseph Myers. Peer-reviewed in [Nature](https://doi.org/10.1038/s41586-025-09833-y)
+      (651:607-613).'
+    links:
+    - label: AlphaProof and AlphaGeometry 2
+      url: https://deepmind.google/blog/ai-solves-imo-problems-at-silver-medal-level/
+      type: Context
+    - label: Nature
+      url: https://doi.org/10.1038/s41586-025-09833-y
+      type: Paper
+    reported_evidence:
+    - machine-checked
+    - verified
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - AlphaProof
+    - AlphaGeometry 2
+    evidence_scope: result
+- id: imo-2025
+  title: IMO 2025 problem set
+  subjects:
+  - Competition mathematics
+  category: Competitions
+  question: Which IMO 2025 problems were solved, and how do formal coverage and grading differ across
+    submissions?
+  caveat: These are multiple attempts at one problem set. Scores, time limits, grading and formal coverage
+    are not interchangeable.
+  events:
+  - title: Gemini Deep Think
+    year: '2025'
+    date: '2025-07'
+    summary: IMO 2025 gold standard (35/42), graded by official IMO coordinators, end-to-end in natural
+      language inside the 4.5-hour contest limit.
+    links:
+    - label: Gemini Deep Think
+      url: https://deepmind.google/blog/advanced-version-of-gemini-with-deep-think-officially-achieves-gold-medal-standard-at-the-international-mathematical-olympiad/
+      type: Context
+    reported_evidence:
+    - verified
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - Gemini Deep Think
+    evidence_scope: result
+  - title: OpenAI at IMO 2025
+    year: '2025'
+    date: '2025-07'
+    summary: gold claimed; graded by three former IMO medalists OpenAI says it hired, not by the IMO,
+      whose president said it "cannot validate the methods". Proofs public; [round-up](https://xenaproject.wordpress.com/2025/08/03/ai-at-imo-2025-a-round-up/).
+    links:
+    - label: OpenAI at IMO 2025
+      url: https://github.com/aw31/openai-imo-2025-proofs
+      type: Code
+    - label: round-up
+      url: https://xenaproject.wordpress.com/2025/08/03/ai-at-imo-2025-a-round-up/
+      type: Context
+    reported_evidence:
+    - self-reported
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - OpenAI (unreleased)
+    evidence_scope: result
+  - title: Aristotle (Harmonic) at IMO 2025
+    year: '2025'
+    date: '2025-10'
+    summary: gold claimed on five problems; public Lean proofs for 1, 3, 4, 5, while geometry problem
+      2 is certified only by Harmonic's own solver, and both problem 4 proofs use `native_decide`. [System
+      paper](https://arxiv.org/abs/2510.01346); grading self-reported.
+    links:
+    - label: Aristotle (Harmonic) at IMO 2025
+      url: https://github.com/harmonic-ai/IMO2025
+      type: Lean
+    - label: System paper
+      url: https://arxiv.org/abs/2510.01346
+      type: Paper
+    reported_evidence:
+    - machine-checked
+    - self-reported
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - Aristotle
+    evidence_scope: result
+  - title: IMO 2025 by verify-and-refine
+    year: '2025'
+    date: '2025-07'
+    summary: Huang and Yang report 5 of 6 problems from a model-agnostic pipeline, with Gemini 2.5 Pro,
+      Grok-4 or GPT-5 equally; self-graded, and [MathArena](https://matharena.ai/imo/) disputes the methodology.
+    links:
+    - label: IMO 2025 by verify-and-refine
+      url: https://arxiv.org/abs/2507.15855
+      type: Paper
+    - label: MathArena
+      url: https://matharena.ai/imo/
+      type: Context
+    reported_evidence:
+    - self-reported
+    - disputed
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - Gemini 2.5 Pro
+    - Grok 4
+    - GPT-5
+    evidence_scope: result
+- id: magma-implications
+  title: Implications between small magma laws
+  subjects:
+  - Algebra
+  - Automated reasoning
+  category: Research
+  question: Which short identities for a set with one binary operation imply which others?
+  caveat: Most reported work used classical automated theorem provers. The finite-magma question is separate
+    from the main implication graph.
+  events:
+  - title: Equational Theories Project
+    year: 2024-2025
+    date: '2025-12'
+    summary: all 22,028,942 non-reflexive implications between the 4694 simplest magma laws determined
+      and formalized in Lean, via explicit proofs and countermodels plus transitive closure, completing
+      the primary goal on 14 April 2025; one case and its dual remain open in the separate finite-magma
+      graph. Most of the work was done by classical automated theorem provers rather than LLMs, and Tao
+      reports that "modern AI tools did not play a major role in this project". [Paper](https://arxiv.org/abs/2512.07087).
+    links:
+    - label: Equational Theories Project
+      url: https://github.com/teorth/equational_theories
+      type: Lean
+    - label: Paper
+      url: https://arxiv.org/abs/2512.07087
+      type: Paper
+    reported_evidence:
+    - machine-checked
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - Classical automated provers
+    evidence_scope: result
+- id: unit-distances
+  title: Erdős unit-distance problem
+  subjects:
+  - Discrete geometry
+  category: Research
+  question: How many pairs of n points in the plane can be exactly one unit apart?
+  caveat: Verification details are reported in the sources; proof artifacts have not been rebuilt for
+    this catalogue.
+  events:
+  - title: Unit-distance conjecture disproved
+    year: '2026'
+    date: '2026-05'
+    summary: an OpenAI reasoning model disproved Erdős's 1946 conjecture by constructing point sets with
+      at least n^(1+δ) unit distances, for a fixed δ > 0 and infinitely many n; outside mathematicians
+      checked it and wrote [companion remarks](https://arxiv.org/abs/2605.20695). An early [Lean development](https://github.com/logical-intelligence/erdos-unit-distance)
+      rested on named classical inputs; Boris Alexeev then had OpenAI's Sol autoformalize the result assuming
+      nothing beyond the axioms of mathematics, about 1.2M lines, which [Buzzard compiled himself](https://xenaproject.wordpress.com/2026/07/20/human-mathematicians-are-being-outcounterexampled/).
+    links:
+    - label: Unit-distance conjecture disproved
+      url: https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf
+      type: Paper
+    - label: companion remarks
+      url: https://arxiv.org/abs/2605.20695
+      type: Paper
+    - label: Lean development
+      url: https://github.com/logical-intelligence/erdos-unit-distance
+      type: Lean
+    - label: Buzzard compiled himself
+      url: https://xenaproject.wordpress.com/2026/07/20/human-mathematicians-are-being-outcounterexampled/
+      type: Context
+    reported_evidence:
+    - verified
+    - machine-checked
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - OpenAI (unreleased)
+    - Sol
+    evidence_scope: result
+- id: galois-q2
+  title: Presentation of the absolute Galois group of Q₂
+  subjects:
+  - Number theory
+  - Algebra
+  category: Research
+  question: Can the symmetries of all algebraic extensions of the 2-adic numbers be described by explicit
+    generators and relations?
+  caveat: The notes describe conditional Lean developments with unformalized classical inputs, not unconditional
+    certificates.
+  events:
+  - title: The 2-adic absolute Galois group
+    year: '2026'
+    date: '2026-07-26'
+    summary: Claude Fable 5 found the first candidate presentation for Roe, then a GPT-5.5 Pro harness
+      run for Turturean produced an explicit presentation plus a long proof; passed Roe's 5,402-group
+      verifier and two Lean developments, both conditional on unformalized classical inputs (nine and
+      seven respectively). Not yet peer reviewed.
+    links:
+    - label: The 2-adic absolute Galois group
+      url: https://roed314.github.io/gq2/
+      type: Context
+    reported_evidence:
+    - machine-checked
+    - self-reported
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - Claude Fable 5
+    - GPT-5.5 Pro
+    evidence_scope: result
+- id: cycle-double-cover
+  title: Cycle double cover conjecture
+  subjects:
+  - Graph theory
+  category: Research
+  question: Does every bridgeless graph admit a collection of cycles covering each edge exactly twice?
+  caveat: Verification details are reported in the sources; proof artifacts have not been rebuilt for
+    this catalogue.
+  events:
+  - title: Cycle Double Cover Conjecture
+    year: '2026'
+    date: '2026-07'
+    summary: GPT-5.6 Sol Ultra proved the 50-year-old conjecture in a three-page note; the [Lean formalization](https://github.com/openai/cdc-lean)
+      is unconditional, with the Jaeger-Kilpatrick eight-flow theorem formalized in-repo rather than assumed.
+      Geelen and Oum wrote independent expositions ([1](https://arxiv.org/abs/2607.15399), [2](https://arxiv.org/abs/2607.16356))
+      that reproduce the argument without asserting a correctness check, so the main verification evidence
+      is the Lean proof. Peer review pending.
+    links:
+    - label: Cycle Double Cover Conjecture
+      url: https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_proof.pdf
+      type: Paper
+    - label: Lean formalization
+      url: https://github.com/openai/cdc-lean
+      type: Lean
+    - label: '1'
+      url: https://arxiv.org/abs/2607.15399
+      type: Paper
+    - label: '2'
+      url: https://arxiv.org/abs/2607.16356
+      type: Paper
+    reported_evidence:
+    - verified
+    - machine-checked
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - GPT-5.6 Sol Ultra
+    evidence_scope: result
+- id: jacobian
+  title: Jacobian conjecture in characteristic zero
+  subjects:
+  - Algebraic geometry
+  category: Research
+  question: Must a polynomial map with a nonzero constant Jacobian determinant have a polynomial inverse?
+  caveat: The notes report a higher-dimensional counterexample; the two-dimensional question is separate.
+  events:
+  - title: Jacobian conjecture counterexample
+    year: '2026'
+    date: '2026-08'
+    summary: Levent Alpöge and Claude Fable 5 produced an explicit three-dimensional map disproving the
+      characteristic-zero conjecture; checking it is a short computation, confirmed by Tao and others,
+      and [formalized in Lean by Lezeau](https://github.com/google-deepmind/formal-conjectures/pull/4474)
+      against a conjecture statement written down before any counterexample existed. Gao later gave counterexamples
+      in [every dimension above two](https://arxiv.org/abs/2608.00222). The two-dimensional case stays
+      open.
+    links:
+    - label: Jacobian conjecture counterexample
+      url: https://terrytao.wordpress.com/2026/07/21/a-digestion-of-the-jacobian-conjecture-counterexample/
+      type: Context
+    - label: formalized in Lean by Lezeau
+      url: https://github.com/google-deepmind/formal-conjectures/pull/4474
+      type: Lean
+    - label: every dimension above two
+      url: https://arxiv.org/abs/2608.00222
+      type: Paper
+    reported_evidence:
+    - verified
+    - machine-checked
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - Claude Fable 5
+    evidence_scope: result
+- id: feige
+  title: Feige’s small-deviation conjecture
+  subjects:
+  - Probability
+  - Statistics
+  category: Research
+  question: How likely is a sum of independent nonnegative random variables to stay below its mean plus
+    a fixed slack?
+  caveat: The paper covers slack δ ≥ 1; the linked Lean coverage is reported as δ = 1 only. Do not label
+    the whole theorem Lean-verified without an audit.
+  events:
+  - title: Feige's conjecture for slack at least 1
+    year: '2026'
+    date: '2026-07'
+    summary: ChatGPT 5.6 Pro found the proof of the sharp bound for every δ >= 1, connecting the 18-day-old
+      Dirichlet calibration theorem of Vlassis and Thomas to Grünbaum's centroid inequality and its Letwin-Yaskin
+      generalization; the sorry-free [Lean formalization](https://github.com/pengzhang91/Feige) covers
+      the unit-slack case δ = 1 only, and δ < 1 stays open. Peer review pending.
+    links:
+    - label: Feige's conjecture for slack at least 1
+      url: https://arxiv.org/abs/2607.23980
+      type: Paper
+    - label: Lean formalization
+      url: https://github.com/pengzhang91/Feige
+      type: Lean
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: 'Read the arXiv abstract: the authors credit ChatGPT 5.6 Pro and state sharpness for
+      δ ≥ 1. Lean coverage was not audited.'
+    models:
+    - GPT-5.6 Pro
+    evidence_scope: result
+- id: gluon-amplitudes
+  title: Single-minus gluon tree amplitudes
+  subjects:
+  - Mathematical physics
+  category: Research
+  question: In the specified kinematic regime, must a tree amplitude with one negative-helicity gluon
+    vanish?
+  caveat: Verification details are reported in the sources; proof artifacts have not been rebuilt for
+    this catalogue.
+  events:
+  - title: Single-minus gluon tree amplitudes are nonzero
+    year: '2026'
+    date: '2026-02'
+    summary: GPT-5.2 Pro conjectured the closed-form amplitude formula and an unnamed internal OpenAI
+      model proved it; Guevara, Lupsasca, Skinner and Strominger checked it by hand against the Berends-Giele
+      recursion and Weinberg's soft theorem. Theoretical physics rather than mathematics, and the proving
+      model is undisclosed.
+    links:
+    - label: Single-minus gluon tree amplitudes are nonzero
+      url: https://arxiv.org/abs/2602.12176
+      type: Paper
+    reported_evidence:
+    - verified
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - GPT-5.2 Pro
+    - OpenAI (unreleased)
+    evidence_scope: result
+- id: differential-parity
+  title: Parity of k-differentials in genus zero and one
+  subjects:
+  - Algebraic geometry
+  - Number theory
+  category: Research
+  question: How can the parity invariant of the relevant k-differentials be computed?
+  caveat: Only a key combinatorial identity is reported as formalized; the geometric reduction requires
+    separate checking.
+  events:
+  - title: Parity of k-differentials in genus zero and one
+    year: '2026'
+    date: '2026-02'
+    summary: Axiom Math's AxiomProver proved the Chen-Gendron parity conjecture unconditionally by finding
+      a Jacobi-symbol reformulation; only the key combinatorial identity is formalized in Lean, with the
+      number-theoretic reduction and the geometry checked by the human co-authors.
+    links:
+    - label: Parity of k-differentials in genus zero and one
+      url: https://arxiv.org/abs/2602.03722
+      type: Paper
+    reported_evidence:
+    - machine-checked
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - AxiomProver
+    evidence_scope: result
+- id: anderson
+  title: Anderson’s quasi-completeness problem
+  subjects:
+  - Commutative algebra
+  category: Research
+  question: Does the implication in Problem 8a of Open Problems in Commutative Ring Theory hold? The exact
+    ring hypotheses belong to the linked statement.
+  caveat: Verification details are reported in the sources; proof artifacts have not been rebuilt for
+    this catalogue.
+  events:
+  - title: Anderson's quasi-completeness problem
+    year: '2026'
+    date: '2026-04'
+    summary: the Rethlas and Archon agents settled Problem 8a of *Open Problems in Commutative Ring Theory*
+      in the negative with essentially no human mathematical input; the [19k-line Lean formalization](https://github.com/frenzymath/Anderson-Conjecture)
+      builds clean and passes a statement-matching check. A [follow-up](https://arxiv.org/abs/2605.25259)
+      reports human experts verifying eight Rethlas results including this one, though only this one is
+      formalized.
+    links:
+    - label: Anderson's quasi-completeness problem
+      url: https://arxiv.org/abs/2604.03789
+      type: Paper
+    - label: 19k-line Lean formalization
+      url: https://github.com/frenzymath/Anderson-Conjecture
+      type: Lean
+    - label: follow-up
+      url: https://arxiv.org/abs/2605.25259
+      type: Paper
+    reported_evidence:
+    - verified
+    - machine-checked
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - Rethlas
+    - Archon
+    evidence_scope: result
+- id: book-ramsey
+  title: The book Ramsey number R(B₈, B₁₀)
+  subjects:
+  - Graph theory
+  - Combinatorics
+  category: Research
+  question: How many vertices force a red eight-page book or a blue ten-page book in every red–blue colouring
+    of a complete graph?
+  caveat: The notes report formal coverage of the upper bound; the lower-bound construction is a separate
+    obligation.
+  events:
+  - title: R(B_8,B_10) = 37
+    year: '2026'
+    date: '2026-06'
+    summary: Kalfus and Lidický determined a book Ramsey number using AutoMath, which found both the
+      problem formulation and the proof strategy; Lean formalization of the upper bound.
+    links:
+    - label: R(B_8,B_10) = 37
+      url: https://arxiv.org/abs/2606.05629
+      type: Paper
+    reported_evidence:
+    - machine-checked
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - AutoMath
+    evidence_scope: result
+- id: qaoa
+  title: Farhi–Goldstone–Gutmann QAOA conjecture
+  subjects:
+  - Quantum computing
+  - Optimization
+  category: Research
+  question: Does the proposed QAOA guarantee hold under the hypotheses in the linked conjecture?
+  caveat: An independent human proof is reported a day earlier; track discovery priority separately from
+    formal verification.
+  events:
+  - title: Farhi-Goldstone-Gutmann QAOA conjecture
+    year: '2026'
+    date: '2026-06'
+    summary: Claude Fable 5 supplied the missing argument and the proof was certified end-to-end in Lean
+      4, [sorry-free and axiom-clean](https://github.com/urikol/QuantumOptimization), with the statement
+      fixed before the model saw the gap. [Marwaha](https://arxiv.org/abs/2606.29562) proved the same
+      conjecture by hand, independently, a day earlier.
+    links:
+    - label: Farhi-Goldstone-Gutmann QAOA conjecture
+      url: https://arxiv.org/abs/2606.29687
+      type: Paper
+    - label: sorry-free and axiom-clean
+      url: https://github.com/urikol/QuantumOptimization
+      type: Lean
+    - label: Marwaha
+      url: https://arxiv.org/abs/2606.29562
+      type: Paper
+    reported_evidence:
+    - machine-checked
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - Claude Fable 5
+    evidence_scope: result
+- id: group-scheme
+  title: Is a finite free group scheme killed by its order?
+  subjects:
+  - Algebraic geometry
+  category: Research
+  question: Does multiplying by the order annihilate every finite free commutative group scheme?
+  caveat: Verification details are reported in the sources; proof artifacts have not been rebuilt for
+    this catalogue.
+  events:
+  - title: A finite free group scheme of order four not killed by four
+    year: '2026'
+    date: '2026-07-20'
+    summary: a counterexample to Grothendieck's 60-year-old question, constructed and formalized with
+      Codex and Claude and merged into mathlib; Buzzard's [account](https://xenaproject.wordpress.com/2026/07/20/human-mathematicians-are-being-outcounterexampled/)
+      credits Mathew and Alpöge and reports he compiled the file himself.
+    links:
+    - label: A finite free group scheme of order four not killed by four
+      url: https://github.com/leanprover-community/mathlib4/pull/41748
+      type: Lean
+    - label: account
+      url: https://xenaproject.wordpress.com/2026/07/20/human-mathematicians-are-being-outcounterexampled/
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - Codex
+    - Claude
+    evidence_scope: result
+- id: unclonable-encryption
+  title: Unconditional unclonable encryption
+  subjects:
+  - Quantum computing
+  - Cryptography
+  category: Research
+  question: Can encryption prevent a quantum ciphertext from being copied into two usable decryptions
+    without computational assumptions?
+  caveat: Verification details are reported in the sources; proof artifacts have not been rebuilt for
+    this catalogue.
+  events:
+  - title: Unconditional unclonable encryption
+    year: '2026'
+    date: '2026-07'
+    summary: Ananth and Sahai report a construction and main proof ideas "generated entirely by Codex
+      using GPT 5.6 Sol Ultra"; [Ragavan](https://arxiv.org/abs/2607.21811) derived it independently with
+      the same model hours apart, and Broadbent and Coladangelo found both convincing ([coverage](https://www.scientificamerican.com/article/ai-helped-produce-two-proofs-for-the-same-cryptography-problem/)).
+      No formal artifact.
+    links:
+    - label: Unconditional unclonable encryption
+      url: https://arxiv.org/abs/2607.21551
+      type: Paper
+    - label: Ragavan
+      url: https://arxiv.org/abs/2607.21811
+      type: Paper
+    - label: coverage
+      url: https://www.scientificamerican.com/article/ai-helped-produce-two-proofs-for-the-same-cryptography-problem/
+      type: News
+    reported_evidence:
+    - verified
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - GPT-5.6 Sol Ultra
+    evidence_scope: result
+- id: vandermonde
+  title: Saturated Newton polytopes of Vandermonde powers
+  subjects:
+  - Algebra
+  - Combinatorics
+  category: Research
+  question: Does every lattice point in the Newton polytope of a Vandermonde power appear as a nonzero
+    monomial?
+  caveat: The linked Lean development is reported to check a seed identity, not the complete theorem.
+  events:
+  - title: Powers of the Vandermonde determinant are eventually non-SNP
+    year: '2026'
+    date: '2026-07'
+    summary: OpenAI Codex supplied the key even-power construction and proof strategy for a conjecture
+      of Monical, Tokcan and Yong, with the full transcript in the appendix; Le and Weber checked and
+      organized the argument, and the [Lean project](https://github.com/steven-le-thien/vandermonde-snp)
+      verifies the seed identity, not the full theorem.
+    links:
+    - label: Powers of the Vandermonde determinant are eventually non-SNP
+      url: https://arxiv.org/abs/2607.23828
+      type: Paper
+    - label: Lean project
+      url: https://github.com/steven-le-thien/vandermonde-snp
+      type: Lean
+    reported_evidence:
+    - machine-checked
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - Codex
+    evidence_scope: result
+- id: hrt
+  title: Heil–Ramanathan–Topiwala conjecture
+  subjects:
+  - Analysis
+  category: Research
+  question: Are finitely many distinct time–frequency shifts of any nonzero square-integrable function
+    linearly independent?
+  caveat: Verification details are reported in the sources; proof artifacts have not been rebuilt for
+    this catalogue.
+  events:
+  - title: Heil-Ramanathan-Topiwala conjecture disproved
+    year: '2026'
+    date: '2026-08'
+    summary: Faulhuber, Petersen, van Velthoven and Voigtlaender exhibited an explicit 12-shift counterexample;
+      GPT-5.6 Pro produced the counterexample and the proof strategy, the authors closed the gaps by hand,
+      and the critical bound is certified by rigorous interval arithmetic.
+    links:
+    - label: Heil-Ramanathan-Topiwala conjecture disproved
+      url: https://arxiv.org/abs/2608.05044
+      type: Paper
+    reported_evidence:
+    - verified
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - GPT-5.6 Pro
+    evidence_scope: result
+- id: zeta-zeros
+  title: Proportion of zeta zeros on the critical line
+  subjects:
+  - Number theory
+  - Analysis
+  category: Research
+  question: What fraction of the nontrivial zeros of the Riemann zeta function can be proved to lie on
+    Re(s) = 1/2?
+  caveat: A positive proportion on the critical line is not a proof of the Riemann hypothesis.
+  events:
+  - title: Two thirds of the zeta zeros on the critical line
+    year: '2026'
+    date: '2026-08-10'
+    summary: an unreleased Claude research model raised the unconditional lower bound on zeros of ζ on
+      the critical line from 41.6% to 67.2%, with a [sorry-free Lean formalization](https://github.com/anthropics/zeta-23-lean)
+      declaring no axioms beyond Lean's three. Checked internally by Alpöge and Furman; Brian Conrey and
+      Dan Goldston examined the paper on short notice, which is a sanity check by the right people rather
+      than refereeing.
+    links:
+    - label: Two thirds of the zeta zeros on the critical line
+      url: https://www.anthropic.com/research/riemann-zeta
+      type: Context
+    - label: sorry-free Lean formalization
+      url: https://github.com/anthropics/zeta-23-lean
+      type: Lean
+    reported_evidence:
+    - machine-checked
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - Anthropic (unreleased)
+    evidence_scope: result
+- id: sendov
+  title: Sendov’s conjecture
+  subjects:
+  - Complex analysis
+  category: Research
+  question: For a polynomial with all roots in the unit disk, is every root within distance one of a root
+    of its derivative?
+  caveat: Verification details are reported in the sources; proof artifacts have not been rebuilt for
+    this catalogue.
+  events:
+  - title: Sendov's conjecture
+    year: '2026'
+    date: '2026-08-12'
+    summary: Lech Mazur, working through the ProofAtlas agent platform, resolved the conjecture for all
+      n >= 2; Tao digested and streamlined the argument, then re-formalized it in Lean with Claude Opus
+      5 ([15,152 lines](https://github.com/teorth/sendov), no `sorry`, no `native_decide`, exact rational
+      Bernstein certificates). That development descends from Mazur's proof rather than being a second
+      discovery, but is separately checkable.
+    links:
+    - label: Sendov's conjecture
+      url: https://terrytao.wordpress.com/2026/08/12/a-digestion-of-the-proof-of-sendovs-conjecture/
+      type: Context
+    - label: 15,152 lines
+      url: https://github.com/teorth/sendov
+      type: Lean
+    reported_evidence:
+    - verified
+    - machine-checked
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - ProofAtlas
+    - Claude Opus 5
+    evidence_scope: result
+- id: p-vs-np
+  title: 'P versus NP: a disputed proof attempt'
+  subjects:
+  - Complexity theory
+  category: Research
+  question: Can every problem whose solutions are efficiently checked also be efficiently solved?
+  caveat: A disputed argument is not an accepted resolution. Keep the original claim, critique and response
+    together.
+  events:
+  - title: P vs. NP by prompting
+    year: '2023'
+    date: '2023-09'
+    summary: a 97-turn GPT-4 dialogue concluding P != NP, resting on its own co-authors' "SAT requires
+      exhaustive search" argument, which was [refuted](https://arxiv.org/abs/2312.02071) for restricting
+      the class of algorithms without justification and then [defended](https://arxiv.org/abs/2401.01193).
+      P versus NP remains unresolved; the underlying argument is contested rather than settled.
+    links:
+    - label: P vs. NP by prompting
+      url: https://arxiv.org/abs/2309.05689
+      type: Paper
+    - label: refuted
+      url: https://arxiv.org/abs/2312.02071
+      type: Paper
+    - label: defended
+      url: https://arxiv.org/abs/2401.01193
+      type: Paper
+    reported_evidence:
+    - disputed
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - GPT-4
+    evidence_scope: result
+- id: minif2f-audit
+  title: Do miniF2F formal statements match the problems?
+  subjects:
+  - Formal verification
+  - Evaluation
+  category: Research
+  question: Does a machine-checked benchmark proof establish the original informal problem?
+  caveat: Kernel acceptance checks the formal statement; correspondence with the intended problem must
+    be checked separately.
+  events:
+  - title: miniF2F misformalizations
+    year: 2022-2025
+    date: '2025-11'
+    summary: a 2025 audit found discrepancies between the formal and informal statements for more than
+      half the benchmark.
+    links:
+    - label: miniF2F misformalizations
+      url: https://arxiv.org/abs/2511.03108
+      type: Paper
+    reported_evidence:
+    - verified
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - Not specified
+    evidence_scope: audit
+- id: frontiermath-integrity
+  title: FrontierMath evaluation integrity
+  subjects:
+  - Evaluation
+  category: Research
+  question: How do data access and errors in the problem set affect the interpretation of scores?
+  caveat: Disclose the dataset version and access conditions; neither a score change nor data access alone
+    proves training contamination.
+  events:
+  - title: FrontierMath disclosure
+    year: 2024-2025
+    date: '2025-01-23'
+    summary: OpenAI had commissioned the benchmark's 300-problem core and had access to statements and
+      solutions, apart from a 50-problem holdout; the funding was disclosed only alongside the headline
+      25% score, the data-access terms a month later, and Epoch's own April 2025 evaluation of the released
+      model scored far below that headline.
+    links:
+    - label: FrontierMath disclosure
+      url: https://epoch.ai/latest/openai-and-frontiermath
+      type: Context
+    reported_evidence:
+    - verified
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models: &id001
+    - Not specified
+    evidence_scope: audit
+  - title: FrontierMath v2
+    year: '2026'
+    date: '2026-06-12'
+    summary: an AI-assisted audit found errors in roughly 42% of the original problem set, where earlier
+      human QA had caught about 5%; v2 corrected 135 problems and removed 12, so any score must name the
+      version it was measured on and v1 and v2 results are not directly comparable.
+    links:
+    - label: FrontierMath v2
+      url: https://epoch.ai/benchmarks/frontiermath-tier-4-v2
+      type: Context
+    reported_evidence:
+    - verified
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models: *id001
+    evidence_scope: audit
+- id: gradient-step
+  title: Gradient-descent step-size bounds and novelty
+  subjects:
+  - Optimization
+  category: Research
+  question: Which step-size guarantee was obtained, and did it improve the already published bound?
+  caveat: Compare the same assumptions and objective guarantee before calling a numerical bound an improvement.
+  events:
+  - title: The GPT-5 convex-bound announcement
+    year: '2025'
+    date: '2025-03'
+    summary: announced on X as GPT-5 proving new mathematics by improving a gradient-descent step-size
+      condition to 1.5/L; [the source paper](https://arxiv.org/abs/2503.10138) had already published the
+      sharp 1.75/L months earlier, and the eventual writeup concedes both that gap and that internal models
+      derived the optimal bound from scratch.
+    links:
+    - label: The GPT-5 convex-bound announcement
+      url: https://arxiv.org/abs/2511.16072
+      type: Paper
+    - label: the source paper
+      url: https://arxiv.org/abs/2503.10138
+      type: Paper
+    reported_evidence:
+    - disputed
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - GPT-5
+    evidence_scope: result
+- id: first-proof-1
+  title: 'First Proof: inaugural problem set'
+  subjects:
+  - Research mathematics
+  - Evaluation
+  category: Competitions
+  question: Which of the ten research problems were solved under the organisers’ criteria?
+  caveat: Lab assessments and organiser assessments differ. Preserve both alongside the exact attempt
+    and grading protocol.
+  events:
+  - title: First Proof batch 1
+    year: '2026'
+    date: '2026-02'
+    summary: organizers judged two of ten problems definitively solved, and one of those duplicated an
+      existing archived proof, against labs claiming five or six on the same ten questions; their summary
+      of the submissions was "a lot of very convincing nonsense".
+    links:
+    - label: First Proof batch 1
+      url: https://www.scientificamerican.com/article/first-proof-is-ais-toughest-math-test-yet-the-results-are-mixed/
+      type: News
+    reported_evidence:
+    - verified
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - Multiple systems
+    evidence_scope: result
+  - title: Aletheia on First Proof
+    year: '2026'
+    date: '2026-02'
+    summary: Google DeepMind's agent solved 6 of the 10 inaugural First Proof problems fully autonomously
+      by majority expert assessment; the graders were academic mathematicians the team recruited, some
+      Google-affiliated, best-of-2 selection used the team's own expertise, and one agent's attempt was
+      rated "Critically Flawed" on a problem the paper counts as solved.
+    links:
+    - label: Aletheia on First Proof
+      url: https://arxiv.org/abs/2602.21201
+      type: Paper
+    reported_evidence:
+    - self-reported
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - Aletheia
+    evidence_scope: result
+- id: collatz-kernel
+  title: 'Collatz: an invalid machine-checked disproof'
+  subjects:
+  - Number theory
+  - Formal verification
+  category: Research
+  question: Does repeatedly halving an even integer, or replacing an odd integer by 3n + 1, always eventually
+    reach 1?
+  caveat: This episode is not a disproof of Collatz. A kernel implementation bug invalidated the certificate;
+    checker versions matter.
+  events:
+  - title: The Collatz kernel-soundness episode
+    year: '2026'
+    date: '2026-08-01'
+    summary: an AI-assisted `sorry`-free Lean "disproof" of Collatz stood for about three days, 25 to
+      28 July, by exploiting a phantom-parameter bug in the kernel's nested inductive types, and cleared
+      the independent Nanoda checker by hitting a second, separate bug; Kiran Gopinathan reduced it to
+      a proof of `False` and the Lean team patched it within an hour.
+    links:
+    - label: The Collatz kernel-soundness episode
+      url: https://leodemoura.github.io/blog/2026-8-1-postmortem-for-kernel-soundness-bug-14576/
+      type: Context
+    reported_evidence:
+    - debunked
+    reviewed_on: '2026-09-08'
+    review_note: Read the Lean maintainer’s postmortem describing the kernel bug and the separate outdated-nanoda
+      bug. No checker was rerun.
+    models:
+    - Not specified
+    evidence_scope: result
+- id: imo-2026
+  title: IMO 2026 problem set
+  subjects:
+  - Competition mathematics
+  category: Competitions
+  question: Which competition statements do the public artifacts prove, and who assessed their correspondence?
+  caveat: Public formal code does not by itself establish that its statements match the original competition
+    problems.
+  events:
+  - title: IMO 2026 lab claims
+    year: '2026'
+    date: '2026-07'
+    summary: Huawei's Celia and RedNote's dots-note-3.0 each claimed 42/42, and Anthropic reports the
+      same for Claude Opus 5 graded by a panel of three frontier models with one human-checked solution
+      per problem. The IMO has published nothing confirming any AI participation or grading, and its official
+      results list only the human contestants.
+    links:
+    - label: IMO 2026 lab claims
+      url: https://techxplore.com/news/2026-07-ai-humans-score-math-contest.html
+      type: News
+    reported_evidence:
+    - self-reported
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - Celia
+    - dots-note-3.0
+    - Claude Opus 5
+    evidence_scope: result
+  - title: AxiomMath at IMO 2026
+    year: '2026'
+    date: '2026-07'
+    summary: AxiomProver produced formal statements and proofs for all six problems, the only IMO 2026
+      claim with a machine-checkable artifact; but the same system wrote the formal statements it then
+      proved, and nobody appears to have audited whether they encode the competition problems. See the
+      miniF2F entry.
+    links:
+    - label: AxiomMath at IMO 2026
+      url: https://github.com/AxiomMath/IMO2026
+      type: Lean
+    reported_evidence:
+    - machine-checked
+    - self-reported
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - AxiomProver
+    evidence_scope: result
+- id: domineering
+  title: Berlekamp’s temperature bound for Domineering
+  subjects:
+  - Combinatorial game theory
+  category: Research
+  question: Can a Domineering position have combinatorial-game temperature greater than two?
+  caveat: Formal coverage is reported as partial, and the bundled audits are not independent replication.
+  events:
+  - title: Berlekamp's temperature-2 conjecture
+    year: '2026'
+    date: '2026-08-14'
+    summary: Lech Mazur with GPT-5.6 Pro exhibited a 28-cell Domineering position of temperature 33/16
+      > 2; the Lean development is only partial and the author states the bundled audits "are not unrelated
+      external replication".
+    links:
+    - label: Berlekamp's temperature-2 conjecture
+      url: https://www.proofatlas.ai/research/berlekamp-domineering-temperature-counterexample/
+      type: Context
+    reported_evidence:
+    - self-reported
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - GPT-5.6 Pro
+    evidence_scope: result
+- id: sphere-packing
+  title: Sphere-packing optimality in dimensions 8 and 24
+  subjects:
+  - Discrete geometry
+  - Formal verification
+  category: Research
+  question: Can the known optimal sphere-packing proofs in dimensions 8 and 24 be formalized and checked?
+  caveat: Formalization of an existing human theorem is distinct from discovering a new packing theorem.
+    The preprint and repository have different reported scopes.
+  events:
+  - title: Sphere-Packing-Lean
+    year: '2026'
+    date: '2026-04'
+    summary: 'the formal verification of Viazovska''s sphere-packing optimality in dimensions 8 and 24
+      completed with Math Inc''s Gauss agent: dimension 8 finished in five days, dimension 24 autoformalized
+      from the original paper in two weeks, with Viazovska, Buzzard, Avigad and others as named collaborators.
+      830 files and 180,661 lines with no `sorry`, no `native_decide` and no added axiom. The [preprint](https://arxiv.org/abs/2604.23468)
+      covers the dimension-8 milestone only.'
+    links:
+    - label: Sphere-Packing-Lean
+      url: https://github.com/math-inc/Sphere-Packing-Lean
+      type: Lean
+    - label: preprint
+      url: https://arxiv.org/abs/2604.23468
+      type: Paper
+    reported_evidence:
+    - machine-checked
+    reviewed_on: null
+    review_note: Imported from the original notes; linked claims and artifacts have not been re-audited
+      in this restructuring.
+    models:
+    - Gauss
+    evidence_scope: result
