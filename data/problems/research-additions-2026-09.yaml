@@ -1,0 +1,570 @@
+# Problem-level additions researched on 2026-09-08. See CONTRIBUTING.md.
+contributor: codex-research
+problems:
+- id: navier-stokes-forced-finite-time-blowup
+  title: Navier–Stokes existence and smoothness, forced finite-time blowup
+  subjects: [Partial differential equations, Analysis, Mathematical physics, Formal verification]
+  category: Research
+  question: For three-dimensional incompressible Navier–Stokes flow, can smooth data and smooth forcing produce finite-time breakdown while the kinetic energy remains bounded?
+  caveat: This is a same-day release, not yet peer reviewed or broadly accepted by specialists. The construction uses smooth external forcing, exactly as allowed by alternatives C and D of the official Millennium Prize formulation; it does not establish unforced blowup. OpenAI does not intend to claim the prize. The public Lean project reports full, sorry-free coverage, but its review status is self-assessed and the build has not been reproduced for this catalogue.
+  events:
+  - title: Forced finite-time singularity on Euclidean space and the torus
+    year: '2026'
+    date: '2026-09-08'
+    models: [OpenAI (unreleased), GPT-6 Astra, Codex]
+    summary: OpenAI's internal multiagent system produced a 166-page analytical construction showing that, for every positive viscosity, a smooth compactly supported force and initially stationary smooth flow on three-dimensional Euclidean space can develop unbounded velocity in finite time while retaining bounded kinetic energy; compact support gives the corresponding periodic result. OpenAI reports that roughly 10,000 agents found the result after 88 hours, Codex consolidated intermediate insights, and GPT-6 Astra completed the Lean formalization in another 17 hours. The public metadata identifies zero-sorry Lean theorems for alternatives C and D, using only Lean's three standard axioms and Comparator statements adapted from the independently authored Formal Conjectures project.
+    evidence_scope: result
+    reported_evidence: [machine-checked, self-reported]
+    reviewed_on: '2026-09-08'
+    review_note: Read the announcement, Theorem 1.1 and proof outline, the official Clay formulation, and the repository README, formalization metadata and Comparator instructions. The 166-page proof was not audited and the Lean project was not rebuilt.
+    links:
+    - label: Analytical proof
+      url: https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf
+      type: Paper
+    - label: Lean formalization
+      url: https://github.com/openai/NavierStokesAndEuler
+      type: Lean
+    - label: OpenAI announcement
+      url: https://openai.com/index/navier-stokes-solution/
+      type: Context
+    - label: Official Millennium Prize formulation
+      url: https://www.claymath.org/wp-content/uploads/2022/06/navierstokes.pdf
+      type: Context
+    - label: Independent news coverage
+      url: https://www.nature.com/articles/d41586-026-02842-5
+      type: News
+  - title: Concurrent-work attribution and data-provenance dispute
+    year: '2026'
+    date: '2026-09-08'
+    models: [OpenAI (unreleased)]
+    summary: OpenAI says it began the Millennium-problem run after hearing rumors of concurrent work by Levent Alpöge and Tristan Buckmaster, did not access their specific user data, and cannot rule out influence from de-identified training data. The concurrent result concerns forced Euler rather than this forced Navier–Stokes theorem, but Buckmaster has publicly challenged OpenAI's handling of attribution and provenance. This dispute does not by itself identify a mathematical error in the released proof.
+    evidence_scope: attribution and provenance
+    reported_evidence: [disputed]
+    reviewed_on: '2026-09-08'
+    review_note: Compared OpenAI's concurrent-work statement with same-day reporting quoting Buckmaster. No adjudication or technical proof critique was available at review time.
+    links:
+    - label: OpenAI concurrent-work statement
+      url: https://openai.com/index/navier-stokes-solution/
+      type: Context
+    - label: Reporting on the dispute
+      url: https://www.washingtonpost.com/technology/2026/09/09/openai-claims-it-solved-elusive-math-problem-with-1-million-prize/
+      type: News
+
+- id: euler-unforced-finite-time-blowup
+  title: Finite-time singularity for smooth three-dimensional Euler flow
+  subjects: [Partial differential equations, Analysis, Mathematical physics, Formal verification]
+  category: Research
+  question: Can smooth, compactly supported, divergence-free initial data for the unforced three-dimensional incompressible Euler equations develop a singularity in finite time?
+  caveat: This very recent preprint is unrefereed and has not yet received broad specialist review. Its smooth, unforced result is distinct from earlier lower-regularity blowup constructions and from the concurrent forced-Euler work of Alpöge and Buckmaster. The public Lean project reports a full formalization, but its review status is self-assessed and the build has not been reproduced for this catalogue.
+  events:
+  - title: Smooth compactly supported unforced Euler blowup
+    year: '2026'
+    date: '2026-09-08'
+    models: [OpenAI (unreleased), GPT-6 Astra]
+    summary: OpenAI reports that nearly 100 agents worked for about 50 hours to construct smooth, compactly supported, divergence-free initial velocity whose unforced three-dimensional Euler solution has finite maximal lifespan, unbounded velocity-gradient norm and divergent time-integrated vorticity norm. The released 57-page paper gives the analytical construction, and the shared Lean repository reports two zero-sorry formulations using only Lean's three standard axioms.
+    evidence_scope: result
+    reported_evidence: [machine-checked, self-reported]
+    reviewed_on: '2026-09-08'
+    review_note: Read the announcement, paper abstract and Theorem 1.1, and the repository's scope and formalization metadata. The full proof was not audited and the Lean development was not rebuilt.
+    links:
+    - label: Analytical proof
+      url: https://cdn.openai.com/pdf/315b36cd-ec98-4023-8342-93345194ece1/euler.pdf
+      type: Paper
+    - label: Lean formalization
+      url: https://github.com/openai/NavierStokesAndEuler
+      type: Lean
+    - label: OpenAI announcement
+      url: https://openai.com/index/navier-stokes-solution/
+      type: Context
+
+- id: fermats-last-theorem-formalization
+  title: Fermat's Last Theorem, end-to-end Lean formalization
+  subjects: [Number theory, Formal verification]
+  category: Research
+  question: Can the classical proof of Fermat's Last Theorem be formalized completely in Lean?
+  caveat: This is an AI-produced formalization of existing mathematics, not a new proof strategy or a new theorem. It builds on the Imperial College FLT project, flt-regular and Mathlib, and reproducing the independent checks requires substantial compute.
+  events:
+  - title: Anthropic end-to-end formalization
+    year: '2026'
+    date: '2026-09-04'
+    models: [Anthropic research model]
+    summary: Anthropic reports that AI agents produced a complete Lean 4 formalization in eleven days, with high-level steering by Tianyi Peng. The repository derives Mathlib's FermatLastTheorem, restricts dependencies to Lean's three standard axioms, and records successful checks by Lean, Comparator and the independent nanoda kernel. Kevin Buzzard independently ran Comparator and audited the non-mathematical surface for soundness issues.
+    evidence_scope: formalization
+    reported_evidence: [machine-checked, verified]
+    reviewed_on: '2026-09-08'
+    review_note: Read the repository's statement, attribution and verification sections, Anthropic's announcement, Nature coverage and Buzzard's independent account. The very large build was not rerun.
+    links:
+    - label: Lean repository
+      url: https://github.com/anthropics/fermats-last-theorem
+      type: Lean
+    - label: Anthropic announcement
+      url: https://www.anthropic.com/research/formalizing-fermats-last-theorem
+      type: Context
+    - label: Independent audit by Kevin Buzzard
+      url: https://xenaproject.wordpress.com/2026/09/04/flt-anthropic-has-beaten-me-to-it/
+      type: Context
+    - label: Nature coverage
+      url: https://www.nature.com/articles/d41586-026-02822-9
+      type: News
+
+- id: koethe-krempa-matrix-counterexample
+  title: Köthe conjecture via Krempa's matrix formulation
+  subjects: [Algebra, Ring theory, Formal verification]
+  category: Research
+  question: Must matrices over a nil two-sided ideal form a nil ideal, as in Krempa's formulation equivalent to Köthe's conjecture?
+  caveat: Lean checks a counterexample to the matrix formulation. The classical implication from that formulation to Köthe's original statement is described but is not part of the formal development, and no independent ring-theory review is recorded.
+  events:
+  - title: Autonomous Lean counterexample
+    year: '2026'
+    date: '2026-09-03'
+    models: [GPT-6 Astra]
+    summary: A pre-release GPT-6 Astra run in Epoch AI's LeanOpenProblems harness constructed a nil ideal over the algebraic closure of F2 whose 2 by 2 matrix ideal contains a non-nilpotent element. The repository reports one network-isolated attempt with no human steering, then packages the result for Comparator against the benchmark statement.
+    evidence_scope: matrix-form counterexample
+    reported_evidence: [machine-checked, self-reported]
+    reviewed_on: '2026-09-08'
+    review_note: Read the repository's theorem, fidelity, provenance and verification sections. The Lean build and the 1972 equivalence were not independently checked here.
+    links:
+    - label: Lean proof and provenance
+      url: https://github.com/tadamcz/koethe
+      type: Lean
+
+- id: erdos-548
+  title: Erdős–Sós tree-embedding conjecture, benchmark formulation (Erdős #548)
+  subjects: [Graph theory, Combinatorics, Formal verification]
+  category: Research
+  question: Does every sufficiently edge-dense graph contain every tree of the prescribed size?
+  caveat: The compared Lean theorem uses at least (k-1)n/2 + 1 edges. When (k-1)n is odd this is one edge stronger than the sharp classical hypothesis, so it is a marginally weaker result than the full conjecture.
+  events:
+  - title: Autonomous Lean proof of the benchmark statement
+    year: '2026'
+    date: '2026-09-03'
+    models: [GPT-6 Astra]
+    summary: A pre-release GPT-6 Astra run in Epoch AI's LeanOpenProblems harness produced a Lean proof using a permutation-word counting argument. The repository reports no human steering and a Comparator check against the benchmark statement.
+    evidence_scope: formal benchmark statement
+    reported_evidence: [machine-checked, self-reported]
+    reviewed_on: '2026-09-08'
+    review_note: Read the repository's scope and verification account. The build was not rerun and the statement was not audited against every classical formulation.
+    links:
+    - label: Lean proof and scope notes
+      url: https://github.com/tadamcz/erdos548
+      type: Lean
+    - label: Erdős problem record
+      url: https://www.erdosproblems.com/548
+      type: Context
+
+- id: catalans-constant-irrationality-claim
+  title: 'Catalan’s constant: disputed AI-assisted irrationality proof'
+  subjects: [Number theory, Analysis]
+  category: Research
+  question: Is Catalan's constant irrational?
+  caveat: The preprint is disputed. A public technical objection alleges an inconsistent recurrence factor that invalidates the zero count used for the degree bound; the only whole-proof verification claimed in the paper is another language-model reading.
+  events:
+  - title: Weighted-tail irrationality claim
+    year: '2026'
+    date: '2026-09'
+    models: [ChatGPT 5.6 Solar]
+    summary: Zhi-Wei Sun's preprint adapts the Calegari–Dimitrov–Tang framework after repeated AI attempts failed and the author supplied a weighting idea; the model contributed numerical work and was used as a claimed verifier. A specific objection to equations 1.4 and 2.12 remained unresolved at review time.
+    evidence_scope: claimed proof
+    reported_evidence: [self-reported, disputed]
+    reviewed_on: '2026-09-08'
+    review_note: Read arXiv v1 and the linked technical objection. No corrected version, human verification or formal artifact was found.
+    links:
+    - label: Claimed proof
+      url: https://arxiv.org/abs/2609.04176
+      type: Paper
+    - label: Technical objection
+      url: https://news.ycombinator.com/item?id=49560333
+      type: Context
+
+- id: qma2-qma-quantum-oracle
+  title: Quantum-oracle separation between QMA(2) and QMA
+  subjects: [Quantum computing, Complexity theory]
+  category: Research
+  question: Is there a quantum oracle relative to which unentangled two-proof verification is more powerful than ordinary QMA?
+  caveat: The result is relative to a quantum oracle and does not separate QMA(2) from QMA in the unrelativized setting. The preprint is not formally verified or independently reviewed.
+  events:
+  - title: Symmetric-subspace oracle separation
+    year: '2026'
+    date: '2026-09-02'
+    models: [ChatGPT 5.6 Sol]
+    summary: The authors state that ChatGPT generated the main proof idea after being directed to the polynomial method of She and Yuen. They then verified, simplified and developed it into a quantum-oracle separation and a resolution of Watrous's no-disentanglers conjecture for all error parameters whose sum is below one.
+    evidence_scope: result
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-09-08'
+    review_note: Read the abstract, theorem statements and detailed AI-use disclosure in arXiv v1. The proof was not independently checked.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2609.02865
+      type: Paper
+
+- id: daykin-frankl
+  title: Daykin–Frankl conjecture for convex subsets of the Boolean lattice
+  subjects: [Combinatorics, Order theory]
+  category: Research
+  question: Must a convex subset P of the Boolean lattice contain at least |P| times the normalized middle-layer size in pairwise incomparable elements?
+  caveat: The four-page preprint is unrefereed, has no formal artifact, and records author verification but no independent check.
+  events:
+  - title: LLM-generated inductive proof
+    year: '2026'
+    date: '2026-09-02'
+    models: [GPT-5.6 Sol Pro]
+    summary: Kada Williams reports verifying and communicating an LLM-generated proof. The argument proves a stronger product inequality for convex subsets and obtains the 1983 conjecture as a consequence.
+    evidence_scope: result
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-09-08'
+    review_note: Read the full short preprint and its provenance statement. No independent or machine check was found.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2609.03087
+      type: Paper
+
+- id: trautman-conjecture
+  title: Smooth counterexample to the Trautman conjecture
+  subjects: [Complex analysis, Differential geometry]
+  category: Research
+  question: Does a smooth three-dimensional CR manifold with a nowhere-zero closed section of its canonical bundle have to be locally embeddable in complex two-space?
+  caveat: This is a preliminary, unrefereed preprint without formalization or independent review.
+  events:
+  - title: Strongly pseudoconvex counterexample
+    year: '2026'
+    date: '2026-09-02'
+    models: [ChatGPT Plus]
+    summary: Sean Curry states that experimentation with ChatGPT produced the counterexample construction and an initial draft. He substantially revised the text and independently checked the calculations and arguments. The result modifies standard nonembeddable CR three-manifolds while preserving a nowhere-zero closed canonical section.
+    evidence_scope: result
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-09-08'
+    review_note: Read the abstract, main theorem and AI-use acknowledgement in arXiv v1. No model version, independent check or formal proof was found.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2609.03198
+      type: Paper
+
+- id: boltzmann-entropy-production-monotonicity
+  title: McKean's entropy-production monotonicity question for the Boltzmann equation
+  subjects: [Analysis, Partial differential equations, Mathematical physics]
+  category: Research
+  question: Must entropy production decrease monotonically for space-homogeneous hard-sphere or Maxwell-molecule Boltzmann dynamics?
+  caveat: The counterexamples do not settle the corresponding question for the Landau equation. The preprint is unrefereed, unformalized and lacks an independent check.
+  events:
+  - title: Radial Maxwellian-mixture counterexamples
+    year: '2026'
+    date: '2026-09-01'
+    models: [ChatGPT 5.6 Sol, Claude]
+    summary: Luis Silvestre reports that ChatGPT produced a first proof using his earlier paper and notes, Claude helped rewrite it, and he reinterpreted and restructured the final argument. Radially symmetric mixtures of Maxwellians show entropy production need not be monotone for hard spheres or Maxwell molecules.
+    evidence_scope: result
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-09-08'
+    review_note: Read the abstract, parameter scope and AI-use disclaimer in arXiv v1. The calculations were not reproduced.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2609.01753
+      type: Paper
+
+- id: kourovka-21-29-saxl-graphs
+  title: 'Kourovka 21.29: Common neighbours in generalized Saxl graphs'
+  subjects: [Group theory, Combinatorics, Formal verification]
+  category: Research
+  question: Do every two vertices in the relevant generalized Saxl graph of a primitive permutation group have a common neighbour?
+  caveat: The Lean artifact reportedly covers existence of counterexamples at every base size, but not all additional base-two families or diameter computations; no third party audited statement-to-paper fidelity.
+  events:
+  - title: Infinite counterexample families
+    year: '2026'
+    date: '2026-09-01'
+    models: [Codex, ChatGPT Pro, Claude]
+    summary: Rizzoli and Thomas used several models to find and develop primitive-group counterexamples for every base size, answering Kourovka Problem 21.29 negatively. Codex produced much of the computational code and most of the Lean formalization, while the authors reviewed statements and the completed formalization.
+    evidence_scope: every-base-size counterexamples
+    reported_evidence: [machine-checked, self-reported]
+    reviewed_on: '2026-09-08'
+    review_note: Read the paper abstract and the linked public source record. The Lean project was not rebuilt and specialist review was not found.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2609.01367
+      type: Paper
+
+- id: stable-forking-conjecture
+  title: Stable forking conjecture in simple theories
+  subjects: [Logic, Model theory]
+  category: Research
+  question: In every simple theory, can forking always be witnessed by a stable formula?
+  caveat: The preprint is unrefereed and unformalized, with no independent check recorded. The authors supplied the known structural constraints and wrote the proofs and manuscript.
+  events:
+  - title: Counterexample from a quantum graph algebra
+    year: '2026'
+    date: '2026-08-31'
+    models: [ChatGPT 5.6 Sol]
+    summary: Freitag and Mutchnik report that guided conversations with ChatGPT led to a simple theory built from an infinite-dimensional vector space over the fraction division ring of a quantum graph algebra, giving a counterexample to the 1996 conjecture. The authors developed and checked the mathematics.
+    evidence_scope: result
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-09-08'
+    review_note: Read the abstract and the authors' division-of-labour account in arXiv v1. No formal or independent verification was found.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2609.00436
+      type: Paper
+
+- id: boolean-mul4-multiplicative-complexity
+  title: Unrestricted Boolean multiplicative complexity of four-term polynomial multiplication
+  subjects: [Complexity theory, Algebra, Formal verification]
+  category: Research
+  question: Does multiplying two four-term binary polynomials require nine AND gates even when an XOR–AND circuit may reuse nonlinear intermediate values?
+  caveat: The result settles this natural function, not the general Boyar–Find question. The Lean statements have not received a recorded third-party semantic audit.
+  events:
+  - title: Exact nine-gate lower and upper bound
+    year: '2026'
+    date: '2026-08-31'
+    models: [GPT-5.6 Sol, Claude Opus 5]
+    summary: Gregory Morse reports AI assistance in developing a structural proof that unrestricted multiplicative complexity is exactly nine, with Claude used for adversarial review. A Lean 4 development covers the circuit semantics, lower-bound exclusions and explicit upper bound.
+    evidence_scope: result
+    reported_evidence: [machine-checked, self-reported]
+    reviewed_on: '2026-09-08'
+    review_note: Read the abstract and formalization scope in arXiv v1. The linked Lean project was not rebuilt or semantically audited.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2608.30238
+      type: Paper
+    - label: Lean artifact
+      url: https://github.com/GregoryMorse/unrestricted-boolean-mul
+      type: Lean
+
+- id: critical-percolation-all-dimensions
+  title: Vanishing percolation probability at criticality in every dimension
+  subjects: [Probability, Percolation theory, Formal verification]
+  category: Research
+  question: Is there almost surely no infinite cluster at the critical parameter for nearest-neighbour bond percolation on the integer lattice in every dimension at least two?
+  caveat: The claimed Lean development survives at a pinned commit rather than the repository's main branch. It proves a gluing conjecture reported to imply the percolation result; statement fidelity and the implication have not been independently audited here.
+  events:
+  - title: Claude-generated Lean development
+    year: '2026'
+    date: '2026-08-28'
+    models: [Anthropic Claude]
+    summary: Anthropic's formal-math artifact reports a Lean proof of Kozma and Nitzan's Conjecture 3 via conditioned covariance inequalities, closing the previously open dimensions 3 through 10 if the formal statement and cited implication match the prose claims.
+    evidence_scope: formal gluing conjecture
+    reported_evidence: [machine-checked, self-reported]
+    reviewed_on: '2026-09-08'
+    review_note: Read the pinned artifact and audit record identified by the source registry. The artifact was not rebuilt, and its removal from the main branch is retained as a caveat.
+    links:
+    - label: Pinned Lean artifact
+      url: https://github.com/anthropics/formal-math/tree/795efb86f191735c5481675763537cfb4ff37e55/percolation
+      type: Lean
+    - label: Source gluing conjecture
+      url: https://arxiv.org/abs/2401.12397
+      type: Paper
+
+- id: hyperbolic-surfaces-large-systoles
+  title: Hyperbolic surfaces with large systoles in every large genus
+  subjects: [Geometry, Topology]
+  category: Research
+  question: How large a systole can a closed hyperbolic surface have in each sufficiently large genus?
+  caveat: The preprint is unrefereed, unformalized and has no independent check recorded.
+  events:
+  - title: Limit-infimum constant improved to one
+    year: '2026'
+    date: '2026-08-27'
+    models: [GPT-5.6 Sol]
+    summary: Yifei Cai reports that GPT-5.6 Sol developed the first complete proof within Cai's constant-twist pants-decomposition framework. The note constructs surfaces with systole at least log g minus 12 log log g, improving the previously stated asymptotic lower-bound constant from 2/9 to 1.
+    evidence_scope: result
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-09-08'
+    review_note: Read the abstract, theorem and AI-use declaration in arXiv v1. The proof was not independently checked.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2608.26660
+      type: Paper
+
+- id: heyting-algebra-subterminal-lattice
+  title: Heyting algebras as subterminal lattices of elementary toposes
+  subjects: [Logic, Category theory]
+  category: Research
+  question: Is every Heyting algebra isomorphic to the lattice of subterminal objects of an elementary topos?
+  caveat: The short preprint is unrefereed, unformalized and has no independent check; the AI disclosure does not assign individual proof steps.
+  events:
+  - title: Free two-generator counterexample
+    year: '2026'
+    date: '2026-08-27'
+    models: [ChatGPT 5.6 Sol]
+    summary: Ye and Xu state that the mathematical results were obtained with ChatGPT's help. They prove that the free Heyting algebra on two generators cannot occur as the subterminal lattice of an elementary topos, answering the question negatively.
+    evidence_scope: result
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-09-08'
+    review_note: Read the abstract and AI-use statement in arXiv v1. No independent or formal check was found.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2608.26874
+      type: Paper
+
+- id: nevanlinna-three-omitted-values
+  title: Nevanlinna's three-omitted-values question in a half-plane
+  subjects: [Complex analysis]
+  category: Research
+  question: Must a meromorphic function that omits three values in a half-plane be of bounded type there?
+  caveat: The preprint is unrefereed, unformalized and has no independent check recorded.
+  events:
+  - title: Non-Blaschke counterexample
+    year: '2026'
+    date: '2026-08-26'
+    models: [GPT-5.6 Sol Ultra]
+    summary: Seven authors report that the core construction and proof were generated in a seven-hour autonomous model run and then audited and revised by humans. The explicit meromorphic function omits three values while its point divisors fail the relevant Blaschke condition, giving a negative answer.
+    evidence_scope: result
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-09-08'
+    review_note: Read the abstract and numbered AI-use declaration in arXiv v1. The proof was not independently checked.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2608.26062
+      type: Paper
+
+- id: erdos-4-prime-gaps
+  title: Improved record lower bound for large prime gaps (Erdős #4)
+  subjects: [Number theory]
+  category: Research
+  question: How large can gaps between consecutive primes be relative to iterated logarithms?
+  caveat: This is an improvement to the record bound associated with Erdős #4, not a new resolution of the already settled prize question. The model-written manuscript is difficult to audit and the downstream Lean transcription was not rebuilt here.
+  events:
+  - title: Smoothed probabilistic-tilt sieve
+    year: '2026'
+    date: '2026-08-25'
+    models: [GPT-5.6 Sol]
+    summary: A model-authored manuscript replaces an intermediate sieve in the 2018 Ford–Green–Konyagin–Maynard–Tao argument and claims a factor log_3 T/(log_4 T)^2 improvement. Ben Green publicly reported becoming broadly convinced after consulting Tao and Maynard; a separate Lean transcription was later posted.
+    evidence_scope: improved bound
+    reported_evidence: [verified, self-reported]
+    reviewed_on: '2026-09-08'
+    review_note: Read the manuscript and public source synthesis recording Green's review. The Lean transcription was not rebuilt and no journal review was found.
+    links:
+    - label: Model-authored manuscript
+      url: https://github.com/DottedCalculator/ai-math/blob/main/Erdos_4_GPT_5.6_Sol.pdf
+      type: Paper
+    - label: Erdős problem record
+      url: https://www.erdosproblems.com/4
+      type: Context
+
+- id: complex-structure-six-sphere-claim
+  title: 'Complex structure on the six-sphere: contested AI-assisted claim'
+  subjects: [Complex geometry, Differential geometry]
+  category: Research
+  question: Does the six-sphere admit a complex structure?
+  caveat: This is an unreviewed claim in a problem with many failed proofs. The manuscript explicitly conflicts with a published corrigendum, contains no AI disclosure itself, and the AI attribution is only from a public author statement.
+  events:
+  - title: Modular family of two-tori construction
+    year: '2026'
+    date: '2026-08-23'
+    models: [Claude]
+    summary: A 108-page manuscript attributed publicly by Levent Alpöge to Claude constructs a compact complex threefold claimed to be diffeomorphic to the six-sphere. The paper itself identifies a conflict with Campana–Demailly–Peternell and argues why their obstruction does not apply.
+    evidence_scope: claimed result
+    reported_evidence: [self-reported, disputed]
+    reviewed_on: '2026-09-08'
+    review_note: Read the manuscript's summary, theorem and discussion of the conflicting literature, plus the independent registry's provenance notes. No peer review, formalization or independent validation was found.
+    links:
+    - label: Manuscript
+      url: https://alpo.ge/s6.pdf
+      type: Paper
+    - label: Provenance and caveat record
+      url: https://whataifound.org/
+      type: Context
+
+- id: bounded-mass-property-hopf-threefold
+  title: Bounded mass property on the Hopf threefold
+  subjects: [Complex analysis, Algebraic geometry, Differential geometry]
+  category: Research
+  question: Do all compact complex manifolds have the bounded mass property?
+  caveat: The unrefereed preprint has no formalization or independent check, and the disclosure credits the AI agent with the initial counterexample rather than every part of the final proof.
+  events:
+  - title: Hopf-threefold counterexample
+    year: '2026'
+    date: '2026-08-21'
+    models: [Rethlas, GPT-5.6 Sol]
+    summary: Xia and Zhang report that a Rethlas agent using GPT-5.6 Sol constructed the initial counterexample, later improved by a human collaborator. They prove that the bounded mass property fails on the standard Hopf threefold.
+    evidence_scope: result
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-09-08'
+    review_note: Read the abstract, comments and AI-use disclosure in arXiv v1. The proof was not independently checked.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2608.21053
+      type: Paper
+
+- id: big-line-big-clique-4-6
+  title: First open case of the big-line-big-clique conjecture
+  subjects: [Combinatorics, Discrete geometry]
+  category: Research
+  question: Must every sufficiently large finite point set contain four collinear points or six pairwise visible points?
+  caveat: This settles only the (4,6) case, with an enormous explicit threshold. The preprint is unrefereed, unformalized and has no independent check.
+  events:
+  - title: Explicit (4,6) threshold
+    year: '2026'
+    date: '2026-08-19'
+    models: [GPT-5.6 Sol Pro]
+    summary: Édouard Bonnet reports that after an initial failed attempt and further prompting, GPT-5.6 Sol Pro produced a detailed proof. The paper proves that 10^11055931 points force four collinear points or a six-vertex visibility clique.
+    evidence_scope: first open case
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-09-08'
+    review_note: Read the abstract and AI-use disclosure in arXiv v1. The proof was not independently checked.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2608.19468
+      type: Paper
+
+- id: bounded-prime-gaps-246-formalization
+  title: Bounded prime gaps of 246, Lean formalization
+  subjects: [Number theory, Formal verification]
+  category: Research
+  question: Can the Maynard–Polymath proof that infinitely many consecutive primes differ by at most 246 be formalized in Lean?
+  caveat: This is a formalization of an existing theorem, not a new prime-gap bound. The public flagship Lean theorem assumes Bombieri–Vinogradov as a hypothesis because that theorem is not yet in Mathlib.
+  events:
+  - title: AxiomProver-assisted formalization
+    year: '2026'
+    date: '2026-08-18'
+    models: [AxiomProver]
+    summary: Axiom Math reports that AxiomProver generated machine-checkable Lean proofs from a human-built blueprint, followed by human curation and library work. The repository formalizes the Maynard sieve and the Polymath8b ingredients needed for the bound 246, conditional in Lean on Bombieri–Vinogradov.
+    evidence_scope: conditional formalization
+    reported_evidence: [machine-checked, self-reported]
+    reviewed_on: '2026-09-08'
+    review_note: Read the project page and repository scope and comparator sections. The multi-hour build was not rerun.
+    links:
+    - label: Project page
+      url: https://primegaps.axiommath.ai/
+      type: Context
+    - label: Lean repository
+      url: https://github.com/AxiomMath/PrimeGapsLib
+      type: Lean
+
+- id: vector-riesz-transform-weak-type
+  title: Dimension-free weak-type bound for the vector Riesz transform
+  subjects: [Analysis, Partial differential equations]
+  category: Research
+  question: Is the weak-type (1,1) norm of the vector Riesz transform bounded independently of dimension?
+  caveat: The preprint is unrefereed, unformalized and has no independent check recorded.
+  events:
+  - title: Dimension-free constant two
+    year: '2026'
+    date: '2026-08-18'
+    models: [GPT-5.6 Sol, Claude Opus 5, Danus, Rethlas]
+    summary: Ouyang, Spector and Stockdale report that models developed proof strategies in dialogue with them. The humans redirected a complicated initial route, checked and rewrote the final argument, which proves a dimension-independent weak-type constant at most two and answers Stein's 1986 question.
+    evidence_scope: result
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-09-08'
+    review_note: Read the abstract and detailed collaboration account in the source record. No formal or independent check was found.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2608.18068
+      type: Paper
+
+- id: gamow-liquid-drop-minimizers
+  title: Minimizers in Gamow's liquid drop model
+  subjects: [Calculus of variations, Geometric analysis, Mathematical physics]
+  category: Research
+  question: For which volumes does the three-dimensional liquid-drop energy have minimizers, and when is the ball optimal?
+  caveat: The preprint is unrefereed and unformalized. The authors checked and reworked the proof, but no independent review is recorded.
+  events:
+  - title: Sharp minimizer and nonexistence threshold
+    year: '2026'
+    date: '2026-08-12'
+    models: [ChatGPT 5.6 Pro]
+    summary: Chodosh and Gianocca state that ChatGPT obtained the results over a series of chats without significant assistance and that the fundamental strategy survived their checking and rewrite. The paper characterizes the ball-minimizer range and proves nonexistence above the same sharp threshold.
+    evidence_scope: result
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-09-08'
+    review_note: Read the abstract, theorem scope and explicit AI attribution in arXiv v1. The proof was not independently checked.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2608.11517
+      type: Paper

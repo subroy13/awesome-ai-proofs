@@ -1,0 +1,1256 @@
+# Add or update problem records here. See CONTRIBUTING.md.
+problems:
+- id: oeis-a224515-conjecture-existence
+  title: "Odd squares as XORs of consecutive squares (OEIS A224515)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A224515 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Odd squares as XORs of consecutive squares (OEIS A224515)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/A224515_conjecture_existence.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A224515
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a309132-conjecture-carmichael
+  title: "Characterizing Carmichael numbers by squarefree denominators (OEIS A309132)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A309132 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Characterizing Carmichael numbers by squarefree denominators (OEIS A309132)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/A309132_conjecture_carmichael.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A309132
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a382590-conjecture-kth-prime-factor-is-eventually-periodic
+  title: "Eventual periodicity of indexed prime factors in a coupled recurrence (OEIS A382590)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A382590 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Eventual periodicity of indexed prime factors in a coupled recurrence (OEIS A382590)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/A382590_conjecture_kth_prime_factor_is_eventually_periodic.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A382590
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a091669-conjecture-primitive-root
+  title: "A divisibility criterion for primes with primitive root 2 (OEIS A091669)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A091669 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "A divisibility criterion for primes with primitive root 2 (OEIS A091669)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/a091669_conjecture_primitive_root.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A091669
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a325046-odd-terms-at-k-times-k-plus-1
+  title: "Odd terms occur only at products of consecutive integers (OEIS A325046)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A325046 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Odd terms occur only at products of consecutive integers (OEIS A325046)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/a325046_odd_terms_at_k_times_k_plus_1.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A325046
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a103311-conjecture-0
+  title: "Fibonacci values in a fourth-order recurrence (OEIS A103311)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A103311 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Fibonacci values in a fourth-order recurrence (OEIS A103311)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_103311_conjecture_0.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A103311
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a000108-conjecture-2
+  title: "Distinct fractional parts of reciprocal Catalan sums (OEIS A000108)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A000108 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Distinct fractional parts of reciprocal Catalan sums (OEIS A000108)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_108_conjecture_2.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A000108
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a113254-conjecture-0
+  title: "Square values at odd indices of a recurrence (OEIS A113254)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A113254 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Square values at odd indices of a recurrence (OEIS A113254)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_113254_conjecture_0.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A113254
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a175386-conjecture-0
+  title: "Nonintegrality of weighted binomial sums (OEIS A175386)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A175386 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Nonintegrality of weighted binomial sums (OEIS A175386)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_175386_conjecture_0.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A175386
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a194806-conjecture-0
+  title: "Bounding the size of multiplicative bases (OEIS A194806)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A194806 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Bounding the size of multiplicative bases (OEIS A194806)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_194806_conjecture_0.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A194806
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a227582-conjecture-0
+  title: "A harmonic-number formula for a recurrence sequence (OEIS A227582)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A227582 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "A harmonic-number formula for a recurrence sequence (OEIS A227582)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_227582_conjecture_0.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A227582
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a228143-conjecture-1
+  title: "An integer eighth root of an Apéry determinant series (OEIS A228143)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A228143 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "An integer eighth root of an Apéry determinant series (OEIS A228143)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_228143_conjecture_1.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A228143
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a243106-conjecture-0
+  title: "Digit restrictions in signed sums of powers (OEIS A243106)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A243106 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Digit restrictions in signed sums of powers (OEIS A243106)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_243106_conjecture_0.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A243106
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a248802-conjecture-0
+  title: "Smallest prime factor 67 along an index progression (OEIS A248802)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A248802 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Smallest prime factor 67 along an index progression (OEIS A248802)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_248802_conjecture_0.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A248802
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a248802-conjecture-4
+  title: "Smallest prime factor 1399 outside three exceptional cases (OEIS A248802)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A248802 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Smallest prime factor 1399 outside three exceptional cases (OEIS A248802)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_248802_conjecture_4.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A248802
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a256012-conjecture-0
+  title: "Partitions into distinct non-squarefree integers beyond 23 (OEIS A256012)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A256012 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Partitions into distinct non-squarefree integers beyond 23 (OEIS A256012)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_256012_conjecture_0.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A256012
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a267581-conjecture-0
+  title: "A recurrence for the middle column of Rule 167 (OEIS A267581)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A267581 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "A recurrence for the middle column of Rule 167 (OEIS A267581)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_267581_conjecture_0.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A267581
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a271591-conjecture-0
+  title: "Run lengths in the second binary digit of Tribonacci numbers (OEIS A271591)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A271591 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Run lengths in the second binary digit of Tribonacci numbers (OEIS A271591)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_271591_conjecture_0.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A271591
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a278070-conjecture-0
+  title: "Modular periodicity of a factorial-weighted binomial sum (OEIS A278070)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A278070 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Modular periodicity of a factorial-weighted binomial sum (OEIS A278070)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_278070_conjecture_0.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A278070
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a282779-conjecture-0
+  title: "Periods of powers with prime exponents modulo an integer (OEIS A282779)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A282779 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Periods of powers with prime exponents modulo an integer (OEIS A282779)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_282779_conjecture_0.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A282779
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a289411-conjecture-0
+  title: "Reflection symmetry in cumulative digit-sum comparisons (OEIS A289411)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A289411 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Reflection symmetry in cumulative digit-sum comparisons (OEIS A289411)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_289411_conjecture_0.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A289411
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a002897-conjecture-0
+  title: "A polynomial coefficient formula for cubed central binomial coefficients (OEIS A002897)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A002897 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "A polynomial coefficient formula for cubed central binomial coefficients (OEIS A002897)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_2897_conjecture_0.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A002897
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a306424-conjecture-0
+  title: "A bound of 43 for integers using at most two distinct digits across bases (OEIS A306424)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A306424 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "A bound of 43 for integers using at most two distinct digits across bases (OEIS A306424)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_306424_conjecture_0.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A306424
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a307865-conjecture-0
+  title: "No negative-one power residues for absolute Euler pseudoprimes (OEIS A307865)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A307865 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "No negative-one power residues for absolute Euler pseudoprimes (OEIS A307865)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_307865_conjecture_0.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A307865
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a323557-conjecture-0
+  title: "Odd coefficients occur only at products of consecutive integers (OEIS A323557)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A323557 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Odd coefficients occur only at products of consecutive integers (OEIS A323557)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_323557_conjecture_0.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A323557
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a340737-conjecture-0
+  title: "Convergence of rational approximations to e (OEIS A340737)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A340737 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Convergence of rational approximations to e (OEIS A340737)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_340737_conjecture_0.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A340737
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a341254-conjecture-0
+  title: "Error bounds for a nested-floor sequence (OEIS A341254)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A341254 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Error bounds for a nested-floor sequence (OEIS A341254)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_341254_conjecture_0.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A341254
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a363347-conjecture-2
+  title: "Primes congruent to ±1 modulo 10 as continued-fraction denominators (OEIS A363347)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A363347 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Primes congruent to ±1 modulo 10 as continued-fraction denominators (OEIS A363347)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_363347_conjecture_2.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A363347
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a372761-conjecture-2
+  title: "Unique occurrences of primes above 5 as continued-fraction denominators (OEIS A372761)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A372761 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Unique occurrences of primes above 5 as continued-fraction denominators (OEIS A372761)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_372761_conjecture_2.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A372761
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a051293-conjecture-0
+  title: "Asymptotic counts of subsets with integer averages (OEIS A051293)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A051293 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Asymptotic counts of subsets with integer averages (OEIS A051293)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_51293_conjecture_0.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A051293
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a062567-conjecture-0
+  title: "Smallest multiples with divisible digit reversals (OEIS A062567)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A062567 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Smallest multiples with divisible digit reversals (OEIS A062567)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_62567_conjecture_0.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A062567
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a028859-conjecture-1
+  title: "Counting integer sequences with restricted rises (OEIS A028859)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A028859 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Counting integer sequences with restricted rises (OEIS A028859)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_A028859_conjecture_1.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A028859
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a258667-conjecture-0
+  title: "Asymptotic counts for a restricted married-couple seating problem (OEIS A258667)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A258667 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Asymptotic counts for a restricted married-couple seating problem (OEIS A258667)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_A258667_conjecture_0.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A258667
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a211417-conjecture-specific
+  title: "Divisibility of a factorial ratio by 30n − 1 (OEIS A211417)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A211417 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Divisibility of a factorial ratio by 30n − 1 (OEIS A211417)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_a211417_conjecture_specific.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A211417
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a237271-conjecture-2
+  title: "Counting divisor blocks with bounded ratios (OEIS A237271)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A237271 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Counting divisor blocks with bounded ratios (OEIS A237271)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_a237271_conjecture_2.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A237271
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a300997-finite-difference-is-one-or-two
+  title: "Stabilization times increase by one or two in a mass-sharing automaton (OEIS A300997)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A300997 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Stabilization times increase by one or two in a mass-sharing automaton (OEIS A300997)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_a300997_finite_difference_is_one_or_two.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A300997
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a363102-conjecture-1
+  title: "Continued-fraction denominators are prime or one (OEIS A363102)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A363102 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Continued-fraction denominators are prime or one (OEIS A363102)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_a363102_conjecture_1.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A363102
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
+- id: oeis-a368692-conjecture-integrality
+  title: "Integrality of a factorial ratio (OEIS A368692)"
+  subjects:
+  - Number theory
+  - Combinatorics
+  category: Research
+  question: The conjecture for sequence A368692 is specified in the linked Lean artifact.
+  caveat: The sequence may contain several conjectures; this entry refers only to the statement in the
+    linked artifact. Its correspondence to the OEIS text has not been audited.
+  events:
+  - title: "Integrality of a factorial ratio (OEIS A368692)"
+    year: '2026'
+    date: '2026-05'
+    summary: AlphaProof Nexus publishes a Lean artifact for this conjecture.
+    links:
+    - label: AlphaProof Nexus
+      url: https://arxiv.org/abs/2605.22763
+      type: Paper
+    - label: Statement and proof
+      url: https://github.com/google-deepmind/alphaproof-nexus-results/blob/main/APNOutputs/OEIS/oeis_a368692_conjecture_integrality.lean
+      type: Lean
+    - label: Sequence
+      url: https://oeis.org/A368692
+      type: Context
+    reported_evidence:
+    - machine-checked
+    reviewed_on: '2026-09-08'
+    review_note: Read the linked source to identify this individual result and its attribution; proofs
+      were not independently checked.
+    models:
+    - AlphaProof Nexus
+    evidence_scope: result
+    source_group: erdos-oeis-sweep
