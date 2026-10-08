@@ -8,9 +8,15 @@ if (form) {
   function applyFilters() {
     const filters = Object.fromEntries(Object.entries(fields).map(([id, field]) => [id, field.value]));
     const ordered = [...rows];
-    if (filters.sort === 'title') ordered.sort((a, b) => a.querySelector('.problem-title').textContent.localeCompare(b.querySelector('.problem-title').textContent));
-    if (filters.sort === 'newest') ordered.sort((a, b) => b.dataset.date.localeCompare(a.dataset.date));
-    if (filters.sort === 'oldest') ordered.sort((a, b) => a.dataset.date.localeCompare(b.dataset.date));
+    if (filters.sort === 'title') {
+      ordered.sort((a, b) => a.querySelector('.problem-title').textContent.localeCompare(b.querySelector('.problem-title').textContent));
+    } else if (filters.sort === 'oldest') {
+      ordered.sort((a, b) => a.dataset.date.localeCompare(b.dataset.date) || a.querySelector('.problem-title').textContent.localeCompare(b.querySelector('.problem-title').textContent));
+    } else if (filters.sort === 'catalogue') {
+      ordered.sort((a, b) => ['Research', 'Competitions', 'Historical'].indexOf(a.dataset.category) - ['Research', 'Competitions', 'Historical'].indexOf(b.dataset.category) || a.querySelector('.problem-title').textContent.localeCompare(b.querySelector('.problem-title').textContent));
+    } else {
+      ordered.sort((a, b) => b.dataset.date.localeCompare(a.dataset.date) || a.querySelector('.problem-title').textContent.localeCompare(b.querySelector('.problem-title').textContent));
+    }
     let count = 0;
     for (const row of ordered) {
       row.hidden = !Catalogue.matches(data.get(row), filters);

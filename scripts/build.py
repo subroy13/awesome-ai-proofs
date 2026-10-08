@@ -4,6 +4,7 @@
 import argparse
 from collections import Counter
 from datetime import date
+import functools
 import html
 import json
 from pathlib import Path
@@ -18,6 +19,55 @@ LABELS = dict(zip(CATEGORIES, ["Research problems", "Competition problems", "His
 EVIDENCE = ["verified", "machine-checked", "self-reported", "disputed", "debunked"]
 REPO = "https://github.com/subroy13/awesome-ai-proofs"
 LINK = re.compile(r"\[([^\]]+)\]\((https?://[^\s]+?)\)")
+
+
+@functools.total_ordering
+class Descending:
+    """Helper to reverse a sort key component."""
+
+    def __init__(self, value):
+        self.value = value
+
+    def __lt__(self, other):
+        return self.value > other.value
+
+    def __eq__(self, other):
+        return self.value == other.value
+
+
+def date_key(value):
+    """Return a sortable ISO-like key; unknown month/day sort before known ones."""
+    if re.fullmatch(r"\d{4}-\d{4}", value):
+        value = value.split("-")[-1]
+    parts = value.split("-")
+    return f'{parts[0]}-{parts[1] if len(parts)>1 else "00"}-{parts[2] if len(parts)>2 else "00"}'
+
+
+def event_date(e):
+    return e.get("date", e["year"])
+
+
+def format_date(value):
+    if re.fullmatch(r"\d{4}-\d{4}", value):
+        return value.replace("-", "–")
+    parts = value.split("-")
+    if len(parts) == 1:
+        return value
+    month = date(int(parts[0]), int(parts[1]), 1).strftime("%b")
+    if len(parts) == 2:
+        return f"{month} {parts[0]}"
+    return f"{month} {int(parts[2])}, {parts[0]}"
+
+
+def problem_date(p):
+    values = sorted({event_date(e) for e in p["events"]}, key=date_key)
+    if len(values) == 1:
+        return format_date(values[0])
+    return f"{format_date(values[0])}–{format_date(values[-1])}"
+
+
+def problem_date_key(p):
+    return max(date_key(event_date(e)) for e in p["events"])
 
 
 class UniqueSafeLoader(yaml.SafeLoader):
@@ -68,7 +118,15 @@ def load_problems(folder=None):
         except (yaml.YAMLError, ValueError, TypeError, AttributeError) as error:
             raise ValueError(f"{path}: {error}") from error
     validate(items)
-    return sorted(items, key=lambda p: (CATEGORIES.index(p["category"]), p["title"].casefold(), p["id"]))
+    return sorted(
+        items,
+        key=lambda p: (
+            Descending(problem_date_key(p)),
+            CATEGORIES.index(p["category"]),
+            p["title"].casefold(),
+            p["id"],
+        ),
+    )
 
 
 def strings(value, label):
@@ -189,41 +247,6 @@ def statuses(p):
 def year(p):
     years = [int(y) for e in p["events"] for y in e["year"].split("-")]
     return str(min(years)) if min(years) == max(years) else f"{min(years)}–{max(years)}"
-
-
-def date_key(value):
-    """Return a sortable ISO-like key; unknown month/day sort before known ones."""
-    if re.fullmatch(r"\d{4}-\d{4}", value):
-        value = value.split("-")[-1]
-    parts = value.split("-")
-    return f'{parts[0]}-{parts[1] if len(parts)>1 else "00"}-{parts[2] if len(parts)>2 else "00"}'
-
-
-def event_date(e):
-    return e.get("date", e["year"])
-
-
-def format_date(value):
-    if re.fullmatch(r"\d{4}-\d{4}", value):
-        return value.replace("-", "–")
-    parts = value.split("-")
-    if len(parts) == 1:
-        return value
-    month = date(int(parts[0]), int(parts[1]), 1).strftime("%b")
-    if len(parts) == 2:
-        return f"{month} {parts[0]}"
-    return f"{month} {int(parts[2])}, {parts[0]}"
-
-
-def problem_date(p):
-    values = sorted({event_date(e) for e in p["events"]}, key=date_key)
-    if len(values) == 1:
-        return format_date(values[0])
-    return f"{format_date(values[0])}–{format_date(values[-1])}"
-
-
-def problem_date_key(p):
-    return max(date_key(event_date(e)) for e in p["events"])
 
 
 def mdcell(s):
