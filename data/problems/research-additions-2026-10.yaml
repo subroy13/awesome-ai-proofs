@@ -1,0 +1,447 @@
+# Problem-level additions researched on 2026-10-08. See CONTRIBUTING.md.
+contributor: codex-research
+problems:
+- id: pierce-birkhoff-conjecture
+  title: Pierce–Birkhoff conjecture for piecewise polynomial functions
+  subjects: [Algebra, Real algebraic geometry]
+  category: Research
+  question: Can every continuous, piecewise polynomial function defined on a finite semialgebraic partition of Euclidean space be expressed as a finite lattice combination of polynomials using addition, subtraction, multiplication, and maximum/minimum?
+  caveat: The counterexample is an explicit continuous piecewise quadratic function on a semialgebraic partition of Euclidean space. The preprint is unrefereed and unformalized, with verification based on author checks and symbolic validation.
+  events:
+  - title: Piecewise quadratic counterexample
+    year: '2026'
+    date: '2026-09-09'
+    models: [GPT-5.6, GPT-6, Claude Opus 5, Claude Fable 5.1]
+    summary: Zehua Lai, Lek-Heng Lim, and Junyu Ren construct a counterexample disproving the 1956 Pierce–Birkhoff conjecture. The authors report employing a multi-agent, multi-model workflow where models assisted in exploring candidate piecewise quadratic configurations and verifying non-expressibility as polynomial lattice combinations.
+    evidence_scope: counterexample
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-10-08'
+    review_note: Read the arXiv v1 abstract, construction outline, and AI-use disclosure. The full algebraic calculations were not independently reproduced.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2609.10420
+      type: Paper
+
+- id: talagrand-operator-cotype
+  title: Talagrand's operator cotype problem
+  subjects: [Functional analysis, Probability, Banach spaces]
+  category: Research
+  question: Is the Rademacher cotype of a bounded linear operator between Banach spaces universally bounded by the maximum of its Gaussian cotype and its (q,1)-summing norm?
+  caveat: The preprint is unrefereed, unformalized, and relies on author calculation and verification.
+  events:
+  - title: Negative resolution for cotype-2 operators
+    year: '2026'
+    date: '2026-09-17'
+    models: [ChatGPT (GPT-5.6)]
+    summary: Xinglong Wu resolves Michel Talagrand's operator cotype problem in the negative, demonstrating that the Rademacher cotype cannot be controlled by the Gaussian cotype and (q,1)-summing norm even in the fundamental case q = 2. The author reports that ChatGPT (GPT-5.6) discovered the counterexample structure during interactive experimentation.
+    evidence_scope: counterexample
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-10-08'
+    review_note: Read the arXiv v1 abstract, theorem statement, and AI-attribution section. The operator norm calculations were not independently audited.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2609.19731
+      type: Paper
+
+- id: hinrichs-vybiral-conjecture
+  title: Hinrichs–Vybíral positive-definite kernel lower bound
+  subjects: [Analysis, Linear algebra, Approximation theory]
+  category: Research
+  question: For every continuous, nonnegative, positive definite function f on Euclidean space with f(0) = 1, does the difference kernel matrix [f(x_j - x_k)] always dominate the matrix (1/n) * 1 1^T in the Loewner order?
+  caveat: The preprint provides an explicit 8-point counterexample in seven dimensions. The paper has not undergone formal peer review or computer verification in an interactive theorem prover, though the finite arithmetic is directly checkable.
+  events:
+  - title: Seven-dimensional trigonometric polynomial counterexample
+    year: '2026'
+    date: '2026-09-18'
+    models: [ChatGPT 6, Claude Opus 5]
+    summary: Jan Vybíral presents an explicit counterexample in R^7 using eight evaluation points and a nonnegative trigonometric polynomial where the quadratic form evaluates to 22/5 against a conjectured minimum of 9/2, yielding a gap of -1/10. The author notes the counterexample was found using ChatGPT 6 in a single prompt query by a colleague, with Claude Opus 5 used during manuscript preparation.
+    evidence_scope: counterexample
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-10-08'
+    review_note: Read the arXiv v1 abstract, explicit 8-point coordinates, Gram matrix evaluation, and model acknowledgement. The trigonometric evaluations were spot-checked against the manuscript values.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2609.21733
+      type: Paper
+
+- id: partial-list-colouring
+  title: Partial list colouring conjecture of Albertson–Grossman–Haas
+  subjects: [Graph theory, Combinatorics]
+  category: Research
+  question: For every graph G with n vertices and list chromatic number k, and every l < k, can at least n*(l/k) vertices always be properly coloured from any l-list assignment?
+  caveat: The preprint presents an explicit 14-vertex counterexample. It is an unrefereed preprint without a formal theorem prover artifact, though the finite search and graph properties are directly testable.
+  events:
+  - title: 14-vertex counterexample with list chromatic number three
+    year: '2026'
+    date: '2026-09-20'
+    models: [ChatGPT 6 Astra Ultra]
+    summary: Jonathan A. Noel disproves the 2000 conjecture of Albertson, Grossman, and Haas by exhibiting a 14-vertex graph of list chromatic number 3 with a 2-list assignment in which no proper colouring can colour more than 9 vertices, strictly below the conjectured bound of 14*(2/3) ≈ 9.33 vertices. The author explicitly credits ChatGPT 6 Astra Ultra with discovering and verifying the counterexample graph.
+    evidence_scope: counterexample
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-10-08'
+    review_note: Read the arXiv v1 paper, list assignment tables, and AI-attribution note. The graph's independence number and list coloring bounds were not recomputed.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2609.23291
+      type: Paper
+
+- id: zieve-conjecture-hurwitz-problem
+  title: Reduction of Zieve's conjecture on the Hurwitz existence problem
+  subjects: [Algebraic geometry, Group theory, Combinatorics]
+  category: Research
+  question: Is every candidate branched covering datum over the Riemann sphere realizable whenever the partition parts satisfy the greatest common divisor and least common multiple conditions?
+  caveat: The paper proves a reduction to the three-branch-point case rather than proving the full conjecture unconditionally. The preprint is unrefereed and unformalized.
+  events:
+  - title: Reduction to three branch points via forest partitions
+    year: '2026'
+    date: '2026-09-20'
+    models: [GPT-5.6 Sol, GPT-6 Astra]
+    summary: Liu, Sun, Xu, Ye, and Zhou prove that M. E. Zieve's conjecture on realizable branch data reduces to the case of three branch points. The authors report that GPT-5.6 Sol and GPT-6 Astra provided key assistance in constructing inductive partition schemes and verifying edge cases.
+    evidence_scope: reduction
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-10-08'
+    review_note: Read the arXiv v1 abstract, reduction theorem, and AI-collaboration disclosure. The inductive proof was not independently verified.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2609.23663
+      type: Paper
+
+- id: yao-implicit-membership
+  title: Yao's two-probe implicit membership problem
+  subjects: [Theoretical computer science, Data structures, Ramsey theory]
+  category: Research
+  question: How large an element universe can be supported in a table of size n using only two probes to decide set membership without storing pointers or auxiliary data?
+  caveat: The improvement applies to the two-probe upper bound in the full-table model. The preprint is unrefereed and unformalized.
+  events:
+  - title: Polynomial upper bound for two-probe implicit membership
+    year: '2026'
+    date: '2026-09-23'
+    models: [ChatGPT 5.5 Pro]
+    summary: Songhua He establishes the first quantitative improvement in 45 years to Andrew Yao's 1981 Ramsey-theoretic bounds for implicit data structures, decreasing the two-probe universe threshold from a tower of exponentials to O(n^2 (log n)^2). The author notes that the core proofs were generated by ChatGPT 5.5 Pro without mathematical hints and then validated and edited by the author.
+    evidence_scope: bound improvement
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-10-08'
+    review_note: Read the arXiv v1 abstract, main theorems, and AI-generation statement. The combinatorial arguments were not re-derived.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2609.14032
+      type: Paper
+
+- id: free-groups-simple-af-algebras
+  title: Amenable actions of free groups on unital simple AF-algebras
+  subjects: [Operator algebras, Topological dynamics, Group theory]
+  category: Research
+  question: Do non-amenable free groups admit amenable actions on classifiable unital simple AF C*-algebras?
+  caveat: The preprint is unrefereed and unformalized, with no independent check recorded.
+  events:
+  - title: Existence of amenable actions via Baire category
+    year: '2026'
+    date: '2026-10-01'
+    models: [GPT-6 Astra]
+    summary: Yuhei Suzuki resolves the eight-year-old open existence problem for amenable actions of non-amenable groups on classifiable simple C*-algebras by proving that free groups act amenably on unital simple AF-algebras. Suzuki reports substantial assistance from GPT-6 Astra in discovering dynamical constructions and verifying topological density properties.
+    evidence_scope: result
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-10-08'
+    review_note: Read the arXiv v1 abstract, main theorems, and AI-acknowledgement statement. The Baire category arguments were not checked.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2610.01460
+      type: Paper
+
+- id: linear-hadwiger-conjecture
+  title: Linear Hadwiger conjecture for graph colouring
+  subjects: [Graph theory, Combinatorics, Formal verification]
+  category: Research
+  question: Does there exist an absolute constant C such that every graph with no complete minor K_t has chromatic number at most C*t?
+  caveat: The preprint is unrefereed by journal reviewers. The authors provide a Lean 4 formalization of the main theorem in an associated repository, but the formal build has not been independently reproduced for this catalogue.
+  events:
+  - title: Linear minor bound with Lean 4 formalization
+    year: '2026'
+    date: '2026-10-04'
+    models: [GPT-6 Astra]
+    summary: Sergey Norin and Raphael Steiner prove the Linear Hadwiger Conjecture, showing that K_t-minor-free graphs are O(t)-colorable and settling the linear version of Hugo Hadwiger's 1943 conjecture. The authors state that the proof argument was found by GPT-6 Astra following human conceptual guidance, accompanied by a Lean 4 formal verification.
+    evidence_scope: result
+    reported_evidence: [machine-checked, self-reported]
+    reviewed_on: '2026-10-08'
+    review_note: Read the arXiv v1 preprint, proof outline, AI attribution disclosure, and linked Lean 4 project repository. The Lean code was not compiled locally.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2610.05291
+      type: Paper
+    - label: Code and Lean repository
+      url: https://github.com/raphael-steiner/linear-hadwiger
+      type: Lean
+
+- id: polynomial-littlewood-offord
+  title: Optimal bound for the polynomial Littlewood–Offord problem
+  subjects: [Combinatorics, Probability, Theoretical computer science]
+  category: Research
+  question: Is the anticoncentration probability for a degree-d multilinear polynomial with r disjoint monomials on Rademacher variables bounded by O_d(r^(-1/2))?
+  caveat: The preprint is unrefereed and unformalized, relying on author review and rewriting of the AI-discovered argument.
+  events:
+  - title: Sharp anticoncentration bound via total influence
+    year: '2026'
+    date: '2026-10-06'
+    models: [GPT-6 Pro]
+    summary: Alexandr Grebennikov proves the optimal O_d(r^(-1/2)) bound for the polynomial Littlewood–Offord problem, resolving the conjecture of H. Nguyen and V. Vu. The argument also establishes a bound on the total influence of bounded-degree rational functions, settling a conjecture of Kothari et al. The author credits the core argument as having been discovered autonomously by GPT-6 Pro.
+    evidence_scope: result
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-10-08'
+    review_note: Read the arXiv v1 abstract, theorem statements, and explicit AI-attribution statement. The harmonic analysis and Fourier influence estimates were not independently checked.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2610.08708
+      type: Paper
+
+- id: unique-games-conjecture
+  title: Unique Games Conjecture
+  subjects: [Complexity theory, Theoretical computer science, Formal verification]
+  category: Research
+  question: Is it NP-hard to distinguish whether a 2-prover 1-round unique game has value at least 1 - epsilon or at most delta, for every epsilon, delta > 0?
+  caveat: This claim is part of OpenAI's unrefereed 722-manuscript release and has not been peer-reviewed or broadly certified by complexity theorists. The public repository includes a Lean artifact, but its soundness and semantic alignment with Khot's original formulation remain under community inspection.
+  events:
+  - title: Claimed proof and Lean formalization in OpenAI math repository
+    year: '2026'
+    date: '2026-10-06'
+    models: [OpenAI (unreleased)]
+    source_group: openai-math-2026
+    summary: OpenAI's release of 722 manuscripts across 372 result families includes a claimed proof of Subhash Khot's 2002 Unique Games Conjecture, supported by Lean proof artifacts. The work was generated by an unreleased internal frontier model using roughly three hours of reasoning compute per family. Prior to release, rumors of the result prompted related preprint releases by human researchers, and the proof remains subject to community review.
+    evidence_scope: result
+    reported_evidence: [machine-checked, self-reported]
+    reviewed_on: '2026-10-08'
+    review_note: Read the OpenAI release announcement, repository documentation, and complexity-theory community discussions. The Lean formalization was not audited or compiled locally.
+    links:
+    - label: OpenAI announcement
+      url: https://openai.com/index/sharing-ai-progress-in-mathematics/
+      type: Context
+    - label: Math repository
+      url: https://github.com/openai/math
+      type: Code
+    - label: Independent commentary by Scott Aaronson
+      url: https://scottaaronson.blog/?p=8356
+      type: Context
+
+- id: kakeya-conjecture-four-dimensions
+  title: Kakeya conjecture in four dimensions
+  subjects: [Harmonic analysis, Geometric measure theory, Formal verification]
+  category: Research
+  question: Does every Besicovitch set in four-dimensional Euclidean space have Hausdorff dimension and Minkowski dimension equal to four?
+  caveat: This result is from OpenAI's bulk release of 722 manuscripts and has not received peer review. OpenAI noted that several manuscripts in the release contain unformalized steps or early errors, and independent experts have not yet verified the four-dimensional Kakeya argument.
+  events:
+  - title: Claimed resolution of 4D Kakeya and maximal conjectures
+    year: '2026'
+    date: '2026-10-06'
+    models: [OpenAI (unreleased)]
+    source_group: openai-math-2026
+    summary: OpenAI reports that an internal frontier model produced a manuscript resolving the four-dimensional Kakeya conjecture and related maximal function estimates, with companion Lean proof components in the openai/math collection.
+    evidence_scope: result
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-10-08'
+    review_note: Read the repository manifest and summary notes from the October 6 release. The manuscript calculations were not audited.
+    links:
+    - label: OpenAI announcement
+      url: https://openai.com/index/sharing-ai-progress-in-mathematics/
+      type: Context
+    - label: Math repository
+      url: https://github.com/openai/math
+      type: Code
+
+- id: quasi-riemann-hypothesis
+  title: 'Quasi-Riemann hypothesis: wide zero-free half-plane for the zeta function'
+  subjects: [Number theory, Analytic number theory, Formal verification]
+  category: Research
+  question: Does the Riemann zeta function have a zero-free half-plane of the form Re(s) > theta for an explicit theta strictly less than one?
+  caveat: The claimed result is a zero-free region Re(s) > 7/8, not the full Riemann Hypothesis (which requires Re(s) > 1/2). The manuscript is unrefereed and community auditing of the analytic estimates is in progress.
+  events:
+  - title: Zero-free half-plane Re(s) > 7/8 in OpenAI math release
+    year: '2026'
+    date: '2026-10-06'
+    models: [OpenAI (unreleased)]
+    source_group: openai-math-2026
+    summary: OpenAI's internal frontier model produced a manuscript and Lean proof fragments claiming that all non-trivial zeros of the Riemann zeta function and Dirichlet L-functions satisfy Re(s) <= 7/8, establishing an explicit quasi-Riemann hypothesis. The work is undergoing inspection by analytic number theorists.
+    evidence_scope: zero-free region
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-10-08'
+    review_note: Read the release documentation, result family descriptions, and news coverage of the quasi-Riemann claims. The analytical estimates were not verified.
+    links:
+    - label: OpenAI announcement
+      url: https://openai.com/index/sharing-ai-progress-in-mathematics/
+      type: Context
+    - label: Math repository
+      url: https://github.com/openai/math
+      type: Code
+
+- id: hodge-conjecture-cm-abelian
+  title: Rational Hodge conjecture for CM abelian varieties
+  subjects: [Algebraic geometry, Complex geometry]
+  category: Research
+  question: On a complex abelian variety with complex multiplication, is every Hodge class a rational linear combination of classes of algebraic cycles?
+  caveat: The claimed result covers CM abelian varieties, which is a structured subclass rather than the full general Hodge conjecture. Shortly after release, OpenAI retracted a related companion manuscript regarding K3 surfaces due to a sign error, underscoring that the unformalized algebraic arguments require careful verification.
+  events:
+  - title: Claimed proof for CM abelian varieties
+    year: '2026'
+    date: '2026-10-06'
+    models: [OpenAI (unreleased)]
+    source_group: openai-math-2026
+    summary: An internal OpenAI model produced a proof claiming the rational Hodge conjecture for abelian varieties with complex multiplication (CM). While accompanied by Lean formalizations for parts of the argument, a companion paper on K3 surfaces was retracted due to a sign error, and the CM abelian variety paper remains under specialist review.
+    evidence_scope: result
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-10-08'
+    review_note: Read the repository catalogue, retractions notice for related papers, and algebraic geometry family descriptions. The cycles construction was not verified.
+    links:
+    - label: OpenAI announcement
+      url: https://openai.com/index/sharing-ai-progress-in-mathematics/
+      type: Context
+    - label: Math repository
+      url: https://github.com/openai/math
+      type: Code
+
+- id: rl-vs-l-derandomization
+  title: Randomized logspace derandomization (RL equals L)
+  subjects: [Complexity theory, Theoretical computer science]
+  category: Research
+  question: Can every decision problem solvable by a randomized Turing machine with logarithmic space and one-sided error be solved deterministically in logarithmic space?
+  caveat: The manuscript is unrefereed and lacks independent verification or a complete machine-checked formalization in the initial release.
+  events:
+  - title: Claimed logspace derandomization in OpenAI math repository
+    year: '2026'
+    date: '2026-10-06'
+    models: [OpenAI (unreleased)]
+    source_group: openai-math-2026
+    summary: In the October 2026 collection of 722 manuscripts, OpenAI's internal frontier model claims a complete derandomization showing RL = L, settling one of the central questions in space-bounded complexity theory. Theoretical computer scientists are reviewing the pseudorandom generator construction and proof techniques.
+    evidence_scope: result
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-10-08'
+    review_note: Read the result family summary and complexity-theory commentary. The pseudorandom generator arguments were not audited.
+    links:
+    - label: OpenAI announcement
+      url: https://openai.com/index/sharing-ai-progress-in-mathematics/
+      type: Context
+    - label: Math repository
+      url: https://github.com/openai/math
+      type: Code
+
+- id: kaplansky-zero-divisor-conjecture
+  title: Kaplansky's zero-divisor conjecture for group rings
+  subjects: [Algebra, Ring theory, Group theory, Formal verification]
+  category: Research
+  question: For every torsion-free group G and field K, does the group ring K[G] contain no non-trivial zero divisors?
+  caveat: The claimed counterexample and characteristic-two direct finiteness arguments are unrefereed. The repository provides partial Lean formalizations, but specialist ring-theoretic audit has not confirmed the non-triviality of the zero divisors or torsion-freeness of the group.
+  events:
+  - title: Claimed counterexample in OpenAI math release
+    year: '2026'
+    date: '2026-10-06'
+    models: [OpenAI (unreleased)]
+    source_group: openai-math-2026
+    summary: In the collection of 722 manuscripts, OpenAI claims a counterexample to Kaplansky's zero-divisor conjecture and resolves the direct-finiteness conjecture in characteristic two. Proof manuscripts and partial Lean artifacts are published in openai/math for community inspection.
+    evidence_scope: counterexample
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-10-08'
+    review_note: Read the problem family documentation in openai/math. The group ring construction was not verified.
+    links:
+    - label: OpenAI announcement
+      url: https://openai.com/index/sharing-ai-progress-in-mathematics/
+      type: Context
+    - label: Math repository
+      url: https://github.com/openai/math
+      type: Code
+
+- id: mahler-conjecture
+  title: Mahler's conjecture on the volume product of convex bodies
+  subjects: [Convex geometry, Geometric analysis, Formal verification]
+  category: Research
+  question: Is the volume product of a centrally symmetric convex body in n-dimensional Euclidean space minimized by the hypercube and cross-polytope?
+  caveat: The manuscript claims to resolve both the symmetric and asymmetric forms in all dimensions. The paper has not undergone peer review, and previous human attempts have yielded only lower bounds and low-dimensional cases (n <= 3).
+  events:
+  - title: Claimed resolution of symmetric and general Mahler conjectures
+    year: '2026'
+    date: '2026-10-06'
+    models: [OpenAI (unreleased)]
+    source_group: openai-math-2026
+    summary: OpenAI's internal frontier model produced a manuscript claiming to prove Kurt Mahler's 1939 volume-product conjecture in all dimensions, accompanied by Lean proof components in the openai/math repository.
+    evidence_scope: result
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-10-08'
+    review_note: Read the manuscript abstract and result family overview in openai/math. The functional analytic and shadow-movement bounds were not audited.
+    links:
+    - label: OpenAI announcement
+      url: https://openai.com/index/sharing-ai-progress-in-mathematics/
+      type: Context
+    - label: Math repository
+      url: https://github.com/openai/math
+      type: Code
+
+- id: free-group-factor-isomorphism
+  title: Isomorphism problem for free group factors
+  subjects: [Operator algebras, von Neumann algebras, Formal verification]
+  category: Research
+  question: Are the group von Neumann algebras L(F_n) of non-abelian free groups isomorphic for all n >= 2?
+  caveat: The manuscript is unrefereed and claims to establish isomorphism across all free group factors. Free probability theorists are currently reviewing the free entropy and deformation-rigidity arguments.
+  events:
+  - title: Claimed isomorphism of non-abelian free group factors
+    year: '2026'
+    date: '2026-10-06'
+    models: [OpenAI (unreleased)]
+    source_group: openai-math-2026
+    summary: OpenAI claims a resolution to the free group factor isomorphism problem posed by Murray and von Neumann in 1943, asserting that all L(F_n) for n >= 2 are isomorphic. The proof manuscript and associated formal artifacts are released in openai/math.
+    evidence_scope: result
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-10-08'
+    review_note: Read the result family overview and operator-algebra commentary. The von Neumann algebra isomorphism was not checked.
+    links:
+    - label: OpenAI announcement
+      url: https://openai.com/index/sharing-ai-progress-in-mathematics/
+      type: Context
+    - label: Math repository
+      url: https://github.com/openai/math
+      type: Code
+
+- id: randomized-k-server-bound
+  title: Optimal competitive ratio for the randomized k-server conjecture
+  subjects: [Theoretical computer science, Online algorithms, Metric geometry]
+  category: Research
+  question: Does there exist a randomized online algorithm for the k-server problem on general metric spaces with competitive ratio O(log k)?
+  caveat: The manuscript claims an O(log^2 k) ratio on arbitrary metrics. The paper is unrefereed and unformalized.
+  events:
+  - title: Polylogarithmic randomized competitive ratio
+    year: '2026'
+    date: '2026-10-06'
+    models: [OpenAI (unreleased)]
+    source_group: openai-math-2026
+    summary: In the October 2026 math release, OpenAI claims an algorithm for the randomized k-server problem achieving competitive ratio O(log^2(k+1)) on arbitrary metric spaces, addressing the long-standing randomized k-server conjecture.
+    evidence_scope: bound
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-10-08'
+    review_note: Read the algorithm description and competitive analysis summary in openai/math. The potential-function argument was not verified.
+    links:
+    - label: OpenAI announcement
+      url: https://openai.com/index/sharing-ai-progress-in-mathematics/
+      type: Context
+    - label: Math repository
+      url: https://github.com/openai/math
+      type: Code
+
+- id: pi-irrationality-exponent
+  title: Irrationality exponent of pi
+  subjects: [Number theory, Diophantine approximation, Formal verification]
+  category: Research
+  question: Is the irrationality measure mu(pi) equal to two, meaning that |pi - p/q| > c / q^(2 + epsilon) for all epsilon > 0?
+  caveat: Proving mu(pi) = 2 is a notoriously hard problem where the current known bound is approximately 7.103. The OpenAI manuscript is unrefereed and subject to strict scrutiny by number theorists.
+  events:
+  - title: Claimed determination that mu(pi) = 2
+    year: '2026'
+    date: '2026-10-06'
+    models: [OpenAI (unreleased)]
+    source_group: openai-math-2026
+    summary: OpenAI's release claims a proof that the irrationality exponent of pi is exactly 2, utilizing modular forms and hypergeometric constructions. Number theorists are actively auditing the hypergeometric integral evaluations and linear independence criteria.
+    evidence_scope: result
+    reported_evidence: [self-reported]
+    reviewed_on: '2026-10-08'
+    review_note: Read the number theory result summary in openai/math. The Padé approximation and hypergeometric integrals were not independently verified.
+    links:
+    - label: OpenAI announcement
+      url: https://openai.com/index/sharing-ai-progress-in-mathematics/
+      type: Context
+    - label: Math repository
+      url: https://github.com/openai/math
+      type: Code
