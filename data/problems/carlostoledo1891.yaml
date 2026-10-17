@@ -1,0 +1,70 @@
+# Audit events from cert-machine (https://github.com/carlostoledo1891/cert-machine). See CONTRIBUTING.md.
+contributor: carlostoledo1891
+problems:
+- id: diagonal-ramsey-upper-bound-constant
+  title: Exponential upper-bound constant for diagonal Ramsey numbers
+  subjects:
+  - Combinatorics
+  - Graph theory
+  category: Research
+  question: What is the least constant c such that R(k,k) ≤ c^(k+o(k))?
+  caveat: Only the HorizonMath certificate for 3.6961 is recorded here. What is contested is that certificate,
+    not the inequality; whether R(k,k) ≤ 3.6961^(k+o(k)) holds is not decided by it. Other recent bounds
+    on this constant are not catalogued in this entry.
+  events:
+  - title: HorizonMath certificate for c ≤ 3.6961
+    year: '2026'
+    models:
+    - GPT-5.4 Pro
+    - GPT-5.6 Sol Max
+    summary: HorizonMath (arXiv 2603.15617v2, Appendix A.3) credits GPT-5.4 Pro, reproduced by GPT-5.6
+      Sol Max, with a certificate in the framework of Gupta, Ndiaye, Norin and Wei (their Theorem 14)
+      giving R(k,k) ≤ 3.6960839126^(k+o(k)), below that paper's 3.7992. The benchmark's validator,
+      validators/ramsey_asymptotic.py, accepts the certificate.
+    evidence_scope: result
+    reported_evidence:
+    - self-reported
+    reviewed_on: null
+    review_note: 'Source review pending. Submitted by the author of the audit, Carlos Toledo (carlostoledo1891), in issue #2.'
+    links:
+    - label: HorizonMath paper (v2)
+      url: https://arxiv.org/abs/2603.15617v2
+      type: Paper
+    - label: Validator at commit 4ef0b61a
+      url: https://github.com/ewang26/HorizonMath/blob/4ef0b61a8a6d4c5ded661fab7c2e896af84abe6e/validators/ramsey_asymptotic.py
+      type: Code
+    - label: Gupta, Ndiaye, Norin and Wei
+      url: https://arxiv.org/abs/2407.19026
+      type: Paper
+  - title: The certificate uses a pair outside the region R
+    year: '2026'
+    date: '2026-09-29'
+    models:
+    - Claude
+    summary: 'An independent exact audit (cert-machine, Carlos Toledo) found that at λ = 1, where the
+      constant is read, the certificate uses (X(1), Y(1)) = (0.22745, 0.9988). Theorem 14 needs that
+      pair in the region R, and it lies outside: Erdős''s 1947 random-colouring bound at e = 13/2000,
+      p = 11981/500000 exceeds the pair''s rate by 0.00130. Of the 201 decided points, 56 lie outside
+      R and 128 more are not placed in R by the bound the problem names. The validator (line 299, min)
+      accepts a pair when either of two orientation inequalities holds, while membership in R needs both;
+      with max instead, it rejects the certificate on its first interval. The audit tooling was built
+      with AI assistance. The finding was reported to the authors as HorizonMath issue #10 on 2026-10-05.'
+    evidence_scope: certificate
+    reported_evidence:
+    - disputed
+    reviewed_on: null
+    review_note: 'Source review pending. Submitted by the author of the audit, Carlos Toledo (carlostoledo1891),
+      in issue #2; the authors had not replied to issue #10 at submission.'
+    links:
+    - label: Audit report
+      url: https://carlostoledo.co/reports/horizonmath.html
+      type: Context
+    - label: 'Report to the authors (HorizonMath issue #10)'
+      url: https://github.com/ewang26/HorizonMath/issues/10
+      type: Context
+    - label: Decision record
+      url: https://github.com/carlostoledo1891/cert-machine/blob/422b9526224ccd158a044bf0a6bfeae99e0c71c4/certs/horizonmath-ledger.json
+      type: Code
+    - label: 'GitHub submission issue #2'
+      url: https://github.com/subroy13/awesome-ai-proofs/issues/2#issue-5722206599
+      type: Context

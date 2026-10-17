@@ -165,6 +165,38 @@ problems:
     models:
     - AlphaEvolve
     evidence_scope: result
+  - title: Exact re-check of the published 4 × 4 decompositions
+    year: '2026'
+    date: '2026-09'
+    summary: An independent audit (cert-machine, Carlos Toledo) re-checked both 4 × 4 constructions
+      from commit- and sha256-pinned first-party files, deciding all 4,096 tensor-identity equations
+      of each in exact integer arithmetic. AlphaEvolve's rank-48 decomposition (mathematical_results.ipynb
+      in google-deepmind/alphaevolve_results at commit 4226acb) holds exactly; its coefficients are
+      Gaussian integers divided by 2, and the identity is checked over Z[i] after clearing denominators.
+      AlphaTensor's rank-47 factors (alphatensor_f2.npz) hold exactly over F₂, and the same factors
+      fail over Q, so the 47 is a characteristic-2 result. A standard-library Python script re-checks
+      the certificate and must reject a planted one-coefficient forgery. The audit tooling was built
+      with AI assistance; it checks the published factors and says nothing about optimality.
+    links:
+    - label: Audit report
+      url: https://carlostoledo.co/reports/alphaevolve.html
+      type: Context
+    - label: Certificate
+      url: https://github.com/carlostoledo1891/cert-machine/blob/422b9526224ccd158a044bf0a6bfeae99e0c71c4/certs/strassen-certificate.json
+      type: Code
+    - label: Standard-library verifier
+      url: https://github.com/carlostoledo1891/cert-machine/blob/422b9526224ccd158a044bf0a6bfeae99e0c71c4/tools/verify_strassen.py
+      type: Code
+    - label: 'Submission issue #2'
+      url: https://github.com/subroy13/awesome-ai-proofs/issues/2#issue-5722206599
+      type: Context
+    reported_evidence:
+    - verified
+    reviewed_on: null
+    review_note: 'Source review pending. Submitted by the author of the audit, Carlos Toledo (carlostoledo1891), in issue #2.'
+    models:
+    - Claude
+    evidence_scope: audit
 - id: cap-sets
   title: Large cap sets in eight dimensions
   subjects:
